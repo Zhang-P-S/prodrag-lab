@@ -1,2 +1,5 @@
 # 忽略原始数据
+data/index/
+data/processed/
 data/raw/
+artifacts/
