@@ -1,0 +1,40 @@
+name: prodrag
+channels:
+  - conda-forge
+channel_priority: strict
+
+dependencies:
+  # -------- Python 版本（主流稳定）--------
+  - python=3.10
+
+  # -------- 基础科学计算 --------
+  - numpy
+  - scipy
+
+  # -------- RAG / 检索相关（二进制最容易出坑，用 conda）--------
+  - faiss-cpu
+  - pymupdf
+
+  # -------- 工程常用 --------
+  - pyyaml
+  - tqdm
+
+  # -------- pip 生态 --------
+  - pip
+  - pip:
+      # LLM / NLP（pip 更灵活）
+      - transformers
+      - sentence-transformers
+      - peft
+      - accelerate
+
+      # 检索 / 文本
+      - rank-bm25
+      - jieba
+
+      # API / 服务
+      - fastapi
+      - uvicorn
+
+      # 其他
+      - python-dotenv
