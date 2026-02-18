@@ -1,0 +1,51 @@
+setting: baseline_localv2
+
+paths:
+  qa_jsonl: data/eval/qa_v1_200.jsonl
+  run_out: artifacts/rag_eval/baseline_localv2.jsonl
+  index_dir: data/index
+
+llm:
+  backend: local
+  local:
+    model_path: /home/zps/models/llm/models--unsloth--DeepSeek-R1-Distill-Qwen-7B-bnb-4bit/snapshots/5c46879548e720d7b7d640251a09926b92627fcd
+    lora_path: null
+    dtype: float16
+    device: cuda
+
+eval:
+  seed: 42
+  max_items: 200
+  dual_lang: true
+  flush_every: 10
+
+gen:
+  max_tokens: 256
+  temperature: 0.2
+  top_p: 0.9
+
+retrieval:
+  dense_topk: 15
+  bm25_topk: 15
+  merge_topk: 30
+  fusion_topk: 60
+  rerank_topk: 8
+
+  # 双语保底（你 patched 的 retriever 若支持这些参数）
+  fusion_en_ratio: 0.5
+  rerank_en_ratio: 0.5
+  min_en_candidates: 10
+  min_zh_candidates: 10
+
+controls:
+  enable_rerank: true
+  enable_refusal: true
+  refusal_threshold: 0.7
+  margin_threshold: 0.3
+
+  # 建议：做真实评测时先关掉，否则 Cite 指标会被“补引用”污染
+  autofill_citations: false
+  autofill_topk: 4
+
+  max_chunk_chars: 1200
+  max_ctx_chars: 8000

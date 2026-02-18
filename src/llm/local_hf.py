@@ -21,6 +21,7 @@ from typing import Any, Dict, Iterable, List, Optional
 
 import torch
 from transformers import (
+    AutoConfig,
     AutoModelForCausalLM,
     AutoTokenizer,
     TextIteratorStreamer,
@@ -71,6 +72,9 @@ class LocalHFProvider(LLMProvider):
         device: str = "cuda",
         dtype: str = "float16",
         load_in_4bit: bool = False,
+        device_map: Optional[Any] = None,
+        max_memory: Optional[Dict[str, str]] = None,
+        llm_int8_enable_fp32_cpu_offload: bool = False,
         max_input_tokens: int = 4096,
     ):
         if not model_path:
@@ -80,7 +84,7 @@ class LocalHFProvider(LLMProvider):
         self.lora_path = lora_path
         self.device = device
         self.dtype = _pick_dtype(dtype)
-        self.load_in_4bit = load_in_4bit
+        self.load_in_4bit = bool(load_in_4bit)
         self.max_input_tokens = max_input_tokens
 
         # -------------------------------------------------
@@ -105,13 +109,40 @@ class LocalHFProvider(LLMProvider):
         # -------------------------------------------------
         model_kwargs: Dict[str, Any] = {}
 
+        # 有些 4bit 模型会在 config.json 里自带 quantization_config，
+        # 即使你没显式传 load_in_4bit=True，也会走 bnb 量化加载。
+        # 这种情况下如果 device_map="auto" 发生 CPU/磁盘 dispatch，会直接触发
+        # transformers 的 4bit 环境校验错误（你现在的报错就是这个）。
+        effective_4bit = self.load_in_4bit
+        try:
+            cfg = AutoConfig.from_pretrained(model_path, trust_remote_code=True)
+            qc = getattr(cfg, "quantization_config", None) or (cfg.to_dict() or {}).get("quantization_config")
+            if qc:
+                effective_4bit = True
+        except Exception:
+            pass
+        if (not effective_4bit) and ("4bit" in (model_path or "").lower()):
+            effective_4bit = True
+        self.load_in_4bit = bool(effective_4bit)
+
         # device_map 选择：
         # - 你想“强制整模型上单卡0”：可以 device_map={"":0}
         # - 更通用更稳：device_map="auto"（单卡、多卡、CPU offload 都能处理）
         if device == "cpu":
             model_kwargs["device_map"] = None
         else:
-            model_kwargs["device_map"] = "auto"
+            if device_map is not None:
+                model_kwargs["device_map"] = device_map
+            else:
+                # 4bit 场景优先“整模型上单卡”，避免 auto 导致 CPU/磁盘 dispatch 报错
+                model_kwargs["device_map"] = {"": 0} if self.load_in_4bit else "auto"
+
+        if max_memory:
+            model_kwargs["max_memory"] = dict(max_memory)
+
+        if llm_int8_enable_fp32_cpu_offload:
+            model_kwargs["llm_int8_enable_fp32_cpu_offload"] = True
+
 
         # dtype 选择：
         # - 4bit 情况下，torch_dtype 主要影响部分计算/权重加载策略
@@ -128,17 +159,23 @@ class LocalHFProvider(LLMProvider):
                     "请确认 transformers 版本与 bitsandbytes 已安装。"
                 )
             # 4bit 量化配置（nf4 通常是主流选择）
+            # bnb_config = BitsAndBytesConfig(
+            #     load_in_4bit=True,
+            #     bnb_4bit_quant_type="nf4",
+            #     bnb_4bit_use_double_quant=True,
+            #     # compute_dtype 建议 bf16（若显卡支持），否则 fp16
+            #     bnb_4bit_compute_dtype=torch.bfloat16
+            #     if torch.cuda.is_available()
+            #     else torch.float16,
+            # )
+            # model_kwargs["quantization_config"] = bnb_config
             bnb_config = BitsAndBytesConfig(
                 load_in_4bit=True,
                 bnb_4bit_quant_type="nf4",
                 bnb_4bit_use_double_quant=True,
-                # compute_dtype 建议 bf16（若显卡支持），否则 fp16
-                bnb_4bit_compute_dtype=torch.bfloat16
-                if torch.cuda.is_available()
-                else torch.float16,
+                bnb_4bit_compute_dtype=self.dtype,  # ✅ 用你传入的 dtype
             )
             model_kwargs["quantization_config"] = bnb_config
-
         # ✅ 正确加载模型（使用 model_kwargs，不要写死）
         self.model = AutoModelForCausalLM.from_pretrained(
             model_path,

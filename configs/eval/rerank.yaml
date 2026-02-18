@@ -1,0 +1,33 @@
+# +rerank：在 baseline 基础上增加 rerank，但不启用 refusal
+setting: rerank
+
+paths:
+  qa_jsonl: data/eval/qa_v1_200.jsonl
+  run_out: runs/rerank.jsonl
+  index_dir: data/index
+
+llm:
+  backend: api
+  api:
+    provider: deepseek
+    api_key: ${DEEPSEEK_API_KEY}
+    model: deepseek-chat
+    base_url: https://api.deepseek.com
+
+eval:
+  seed: 42
+  max_items: 200
+  dual_lang: true
+
+retrieval:
+  dense_topk: 30
+  bm25_topk: 30
+  merge_topk: 60
+  fusion_topk: 120
+  rerank_topk: 8
+  prompt_topk: 8
+
+controls:
+  enable_rerank: true
+  enable_refusal: false
+  refusal_threshold: 0.5

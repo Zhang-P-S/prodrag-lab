@@ -69,6 +69,9 @@ def build_llm(cfg: Dict[str, Any]) -> LLMProvider:
             device=str(local_cfg.get("device", "cuda")),
             dtype=str(local_cfg.get("dtype", "float16")),
             load_in_4bit=bool(local_cfg.get("load_in_4bit", False)),
+            device_map=local_cfg.get("device_map"),
+            max_memory=local_cfg.get("max_memory"),
+            llm_int8_enable_fp32_cpu_offload=bool(local_cfg.get("llm_int8_enable_fp32_cpu_offload", False)),
             max_input_tokens=int(local_cfg.get("max_input_tokens", 4096)),
         )
 

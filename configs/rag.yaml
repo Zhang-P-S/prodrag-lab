@@ -14,12 +14,12 @@ paths:
 # LLM 配置
 # =========================================================
 llm:
-  backend: local   # local / api
+  backend: api   # local / api
 
   api:
     provider: deepseek
     model: deepseek-chat
-    api_key: $DEEPSEEK_API_KEY
+    api_key: ${DEEPSEEK_API_KEY}
     base_url: https://api.deepseek.com
 
   local:

@@ -1,0 +1,32 @@
+# baseline：双路召回+融合，不做 rerank，不做 refusal（对照组）
+setting: baseline
+
+paths:
+  qa_jsonl: data/eval/qa_v1_200.jsonl
+  run_out: runs/baseline.jsonl
+  index_dir: data/index  # 你自己的索引目录，按实际修改
+
+llm:  # 直接复用你 configs/rag.yaml 的 llm 结构
+  backend: api
+  api:
+    provider: deepseek
+    api_key: ${DEEPSEEK_API_KEY}   # 推荐环境变量，不要明文写 key
+    model: deepseek-chat
+    base_url: https://api.deepseek.com
+
+eval:
+  seed: 42
+  max_items: 200
+  dual_lang: true
+
+retrieval:
+  dense_topk: 30
+  bm25_topk: 30
+  merge_topk: 60
+  fusion_topk: 120
+  prompt_topk: 8      # 最终拼 prompt 的 chunk 数（建议跟线上一致）
+
+controls:
+  enable_rerank: false
+  enable_refusal: false
+  refusal_threshold: 0.5
