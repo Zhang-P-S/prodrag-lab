@@ -1,0 +1,66 @@
+# pipeline：调试时可以只跑某一步
+pipeline:
+  extract: true
+  chunk: true
+  index: true
+
+# 数据源：用run配置直接指定语言，不做内容检测
+runs:
+  - name: arxiv
+    lang: en
+    manifest: data/raw/arxiv/manifest.jsonl
+    pdf_root: data/raw/arxiv/pdf
+
+  - name: zh
+    lang: zh
+    manifest: data/raw/zh/manifest.jsonl
+    pdf_root: data/raw/zh/pdf
+
+# 抽取后的中间结果（每篇一个json）
+interim_text_dir: data/interim/text
+
+# 分块后的输出（jsonl：每行一个chunk）
+processed_chunks_path: data/processed/chunks/chunks.jsonl
+
+# 抽取参数（调试可以只抽前几页）
+extract:
+  max_pages: null
+
+# 分块参数（按字符切分，稳定易控）
+chunking:
+  chunk_size: 900
+  chunk_overlap: 150
+  min_chunk_chars: 200
+
+# 向量模型：按语言分开配置（FAISS双库必备）
+embedding:
+  en:
+    model_name: BAAI/bge-small-en-v1.5
+    batch_size: 128
+    normalize_embeddings: true
+  zh:
+    model_name: BAAI/bge-small-zh-v1.5
+    batch_size: 128
+    normalize_embeddings: true
+
+# BM25：默认做单库（简单、维护成本低）
+# tokenizer 可选：auto / zh / en
+bm25:
+  tokenizer: auto
+  k1: 1.5
+  b: 0.75
+
+# 索引输出：FAISS按语言分别落盘，BM25单独一套
+index:
+  faiss:
+    enabled: true
+    en:
+      enabled: true
+      out_dir: data/index/faiss_en
+    zh:
+      enabled: true
+      out_dir: data/index/faiss_zh
+
+  bm25:
+    enabled: true
+    out_dir: data/index/bm25
