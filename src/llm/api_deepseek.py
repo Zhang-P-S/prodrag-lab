@@ -30,12 +30,26 @@ class DeepSeekAPIProvider(LLMProvider):
         base_url: str = "https://api.deepseek.com",
         timeout_sec: float = 60,
     ):
+        # 1) 先 strip，避免空格/换行
+        api_key = (api_key or "").strip()
+
+        # 2) 支持 ${ENV_NAME} 这种写法（从环境变量读取）
+        if api_key.startswith("${") and api_key.endswith("}"):
+            env_name = api_key[2:-1].strip()
+            api_key = (os.getenv(env_name, "") or "").strip()
+
+        # 3) 防止用户把 "Bearer xxx" 也写进 key
+        if api_key.lower().startswith("bearer "):
+            api_key = api_key.split(None, 1)[1].strip()
+
         if not api_key:
-            raise ValueError("DeepSeek api_key is empty.")
+            raise ValueError("DeepSeek api_key is empty. Please set env var or pass a real key string.")
+
         self.api_key = api_key
         self.model = model
         self.base_url = base_url.rstrip("/")
         self.timeout_sec = timeout_sec
+
 
     def _url(self) -> str:
         return f"{self.base_url}/v1/chat/completions"
@@ -60,7 +74,24 @@ class DeepSeekAPIProvider(LLMProvider):
 
         t0 = time.time()
         r = requests.post(self._url(), headers=self._headers(), json=payload, timeout=self.timeout_sec)
-        r.raise_for_status()
+
+        # 关键：把401的body打印出来，否则你永远只能看到Unauthorized
+        if r.status_code == 401:
+            key_tail = self.api_key[-4:] if self.api_key else "NONE"
+            raise RuntimeError(
+                "DeepSeek API 401 Unauthorized.\n"
+                f"URL={self._url()}\n"
+                f"api_key_len={len(self.api_key) if self.api_key else 0}, api_key_tail={key_tail}\n"
+                f"ResponseBody={r.text[:800]}"
+            )
+
+        try:
+            r.raise_for_status()
+        except Exception as e:
+            raise RuntimeError(
+                f"DeepSeek API HTTP error: {e}\nURL={self._url()}\nResponseBody={r.text[:800]}"
+            ) from e
+
         data = r.json()
         dt = time.time() - t0
 

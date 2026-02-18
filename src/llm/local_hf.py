@@ -3,13 +3,20 @@ from __future__ import annotations
 
 """
 本地 HuggingFace 推理后端（支持 base + 可选 LoRA）
-特点：
+
+设计目标：
 - 启动时加载模型一次（重）
 - generate：一次性返回完整文本
 - stream_generate：使用 TextIteratorStreamer 真流式输出（推荐）
+- 可选 4bit 量化（bitsandbytes），不开就用 fp16/bf16
+
+⚠️ 注意：
+- 4bit 量化需要安装 bitsandbytes（以及合适 CUDA 版本）
+- LoRA 需要安装 peft
 """
 
 import time
+from threading import Thread
 from typing import Any, Dict, Iterable, List, Optional
 
 import torch
@@ -18,7 +25,12 @@ from transformers import (
     AutoTokenizer,
     TextIteratorStreamer,
 )
-from threading import Thread
+
+# 只有需要 4bit 时才会用到；这里导入，环境没装也能正常跑（会在使用时再报错）
+try:
+    from transformers import BitsAndBytesConfig
+except Exception:
+    BitsAndBytesConfig = None  # type: ignore
 
 try:
     from peft import PeftModel
@@ -30,6 +42,7 @@ from .schemas import ChatMessage, GenerateConfig, LLMResponse
 
 
 def _pick_dtype(dtype: str) -> torch.dtype:
+    """把字符串 dtype 转成 torch.dtype。"""
     d = (dtype or "float16").lower()
     if d in {"fp16", "float16"}:
         return torch.float16
@@ -39,6 +52,18 @@ def _pick_dtype(dtype: str) -> torch.dtype:
 
 
 class LocalHFProvider(LLMProvider):
+    """
+    本地 HuggingFace 推理后端
+
+    参数说明：
+    - model_path: HF 模型路径（本地目录或仓库名）
+    - lora_path: LoRA adapter 路径（可选）
+    - device: "cuda" / "cpu"（一般用 cuda）
+    - dtype: "float16" / "bfloat16" / "float32"
+    - load_in_4bit: 是否启用 4bit 量化
+    - max_input_tokens: prompt 截断长度（避免超长）
+    """
+
     def __init__(
         self,
         model_path: str,
@@ -58,60 +83,84 @@ class LocalHFProvider(LLMProvider):
         self.load_in_4bit = load_in_4bit
         self.max_input_tokens = max_input_tokens
 
-        # 1) tokenizer
-        # ✅ 1) 先加载 tokenizer（关键：赋给 self.tokenizer）
+        # -------------------------------------------------
+        # 1) tokenizer（必须挂到 self.tokenizer）
+        # -------------------------------------------------
         self.tokenizer = AutoTokenizer.from_pretrained(
             model_path,
             trust_remote_code=True,
             use_fast=True,
         )
 
-        # 强制整模型都上 GPU
-        bnb = BitsAndBytesConfig(
-            load_in_4bit=True,
-            bnb_4bit_quant_type="nf4",
-            bnb_4bit_use_double_quant=True,
-            bnb_4bit_compute_dtype=torch.bfloat16,
-        )
+        # 一些模型没有 pad_token，推理时可能 warning 或报错；这里做兜底
+        if self.tokenizer.pad_token is None and self.tokenizer.eos_token is not None:
+            self.tokenizer.pad_token = self.tokenizer.eos_token
 
-        # 2) model
-        # 中文说明：
-        # - 如果你用 4bit，需要 bitsandbytes 环境支持；否则直接 fp16/bf16
-        # - device_map="auto" 能自动放 GPU/CPU（多卡也行）
-        model_kwargs: Dict[str, Any] = dict(
-            torch_dtype=self.dtype,
-            device_map="auto" if device != "cpu" else None,
-        )
+        # 有的 causal LM 更适合 left padding（尤其 batch 推理时）
+        # 不强制也行；如果你后续做 batch，可以考虑打开
+        # self.tokenizer.padding_side = "left"
 
-        if load_in_4bit:
-            # 这里不强制写 BitsAndBytesConfig，避免你环境没有 bitsandbytes 时直接崩
-            # 如果你确定要 4bit，可在此处按你项目已有写法接 BitsAndBytesConfig
-            model_kwargs["load_in_4bit"] = True
+        # -------------------------------------------------
+        # 2) model：按是否 4bit 分支加载
+        # -------------------------------------------------
+        model_kwargs: Dict[str, Any] = {}
+
+        # device_map 选择：
+        # - 你想“强制整模型上单卡0”：可以 device_map={"":0}
+        # - 更通用更稳：device_map="auto"（单卡、多卡、CPU offload 都能处理）
+        if device == "cpu":
+            model_kwargs["device_map"] = None
+        else:
+            model_kwargs["device_map"] = "auto"
+
+        # dtype 选择：
+        # - 4bit 情况下，torch_dtype 主要影响部分计算/权重加载策略
+        # - 非 4bit 情况下 torch_dtype 直接决定加载精度（fp16/bf16）
+        model_kwargs["torch_dtype"] = self.dtype
+        model_kwargs["low_cpu_mem_usage"] = True
+        model_kwargs["trust_remote_code"] = True
+
+        # 只有 load_in_4bit=True 才配置量化
+        if self.load_in_4bit:
+            if BitsAndBytesConfig is None:
+                raise RuntimeError(
+                    "你开启了 load_in_4bit=True，但 transformers.BitsAndBytesConfig 不可用；"
+                    "请确认 transformers 版本与 bitsandbytes 已安装。"
+                )
+            # 4bit 量化配置（nf4 通常是主流选择）
+            bnb_config = BitsAndBytesConfig(
+                load_in_4bit=True,
+                bnb_4bit_quant_type="nf4",
+                bnb_4bit_use_double_quant=True,
+                # compute_dtype 建议 bf16（若显卡支持），否则 fp16
+                bnb_4bit_compute_dtype=torch.bfloat16
+                if torch.cuda.is_available()
+                else torch.float16,
+            )
+            model_kwargs["quantization_config"] = bnb_config
+
+        # ✅ 正确加载模型（使用 model_kwargs，不要写死）
         self.model = AutoModelForCausalLM.from_pretrained(
             model_path,
-            quantization_config=bnb,
-            device_map={"": 0},
-            torch_dtype=torch.bfloat16,
-            low_cpu_mem_usage=True,
+            **model_kwargs,
         )
         self.model.eval()
 
+        # -------------------------------------------------
         # 3) optional LoRA
+        # -------------------------------------------------
         if lora_path:
             if PeftModel is None:
                 raise RuntimeError("peft is not installed, but lora_path is provided.")
             self.model = PeftModel.from_pretrained(self.model, lora_path)
             self.model.eval()
-        if self.tokenizer.pad_token is None and self.tokenizer.eos_token is not None:
-            self.tokenizer.pad_token = self.tokenizer.eos_token
-
 
     def _build_prompt(self, messages: List[ChatMessage]) -> str:
         """
-        把 ChatMessage 列表拼成单段 prompt。
-        说明：
-        - 不同模型 chat template 不同；最稳妥是使用 tokenizer.apply_chat_template（若支持）
-        - 若 tokenizer 没有 chat_template，就用简单拼接（通用但不如模板质量高）
+        把 ChatMessage 列表拼成 prompt。
+
+        最优做法：优先用 tokenizer.apply_chat_template（如果模型提供 chat_template）
+        兜底：简单拼接（通用但可能不如模板对齐）
         """
         if hasattr(self.tokenizer, "apply_chat_template"):
             try:
@@ -139,14 +188,27 @@ class LocalHFProvider(LLMProvider):
         cfg = config or GenerateConfig()
         prompt = self._build_prompt(messages)
 
+        # tokenize + 截断（避免 prompt 过长 OOM）
         inputs = self.tokenizer(
             prompt,
             return_tensors="pt",
             truncation=True,
             max_length=self.max_input_tokens,
         )
-        inputs = {k: v.to(self.model.device) for k, v in inputs.items()}
 
+        # 把输入放到正确设备：
+        # - 如果 device_map="auto"，model.device 可能不是一个固定 device（尤其多卡）
+        # - 但 inputs 一般放到 cuda:0 即可，HF 会处理跨设备（大多数情况下没问题）
+        # - 更稳方式：取 inputs 送到 self.model.device（对单卡最稳）
+        try:
+            target_device = self.model.device
+            inputs = {k: v.to(target_device) for k, v in inputs.items()}
+        except Exception:
+            # 多卡情况下 self.model.device 可能不可用；退化到 cuda:0 或 cpu
+            if torch.cuda.is_available():
+                inputs = {k: v.to("cuda:0") for k, v in inputs.items()}
+
+        # do_sample：若温度极低，则默认为贪心
         do_sample = cfg.do_sample
         if do_sample is None:
             do_sample = cfg.temperature > 1e-6
@@ -154,12 +216,18 @@ class LocalHFProvider(LLMProvider):
         gen_kwargs = dict(
             max_new_tokens=cfg.max_tokens,
             do_sample=do_sample,
-            temperature=cfg.temperature,
-            top_p=cfg.top_p,
             repetition_penalty=cfg.repetition_penalty,
             pad_token_id=self.tokenizer.pad_token_id,
             eos_token_id=self.tokenizer.eos_token_id,
+            use_cache=True,  # ✅ 加速，尤其是流式
         )
+
+        # ✅ 只有采样模式才传这些
+        if do_sample:
+            gen_kwargs.update(
+                temperature=cfg.temperature,
+                top_p=cfg.top_p,
+            )
 
         t0 = time.time()
         with torch.no_grad():
@@ -167,18 +235,27 @@ class LocalHFProvider(LLMProvider):
         dt = time.time() - t0
 
         # 只取新增部分（避免把 prompt 原样回显）
-        new_tokens = out[0, inputs["input_ids"].shape[1]:]
+        new_tokens = out[0, inputs["input_ids"].shape[1] :]
         text = self.tokenizer.decode(new_tokens, skip_special_tokens=True)
 
         meta = None
         if cfg.return_meta:
-            meta = {"latency_sec": dt, "model": self.model_path, "backend": "local"}
+            meta = {
+                "latency_sec": dt,
+                "model": self.model_path,
+                "backend": "local",
+                "load_in_4bit": bool(self.load_in_4bit),
+                "lora": bool(self.lora_path),
+            }
         return LLMResponse(text=text, meta=meta)
 
     def stream_generate(self, messages: List[ChatMessage], config: Optional[GenerateConfig] = None) -> Iterable[str]:
         """
         真流式：边 generate 边 yield。
-        注意：本地真流式需要线程 + TextIteratorStreamer。
+
+        原理：
+        - TextIteratorStreamer 会在模型生成时不断产出 token 文本
+        - 需要把 generate 放到后台线程，主线程迭代 streamer 输出
         """
         cfg = config or GenerateConfig()
         prompt = self._build_prompt(messages)
@@ -189,7 +266,14 @@ class LocalHFProvider(LLMProvider):
             truncation=True,
             max_length=self.max_input_tokens,
         )
-        inputs = {k: v.to(self.model.device) for k, v in inputs.items()}
+
+        # 同 generate 的设备处理逻辑
+        try:
+            target_device = self.model.device
+            inputs = {k: v.to(target_device) for k, v in inputs.items()}
+        except Exception:
+            if torch.cuda.is_available():
+                inputs = {k: v.to("cuda:0") for k, v in inputs.items()}
 
         do_sample = cfg.do_sample
         if do_sample is None:
@@ -197,23 +281,28 @@ class LocalHFProvider(LLMProvider):
 
         streamer = TextIteratorStreamer(
             self.tokenizer,
-            skip_prompt=True,            # 不输出 prompt
-            skip_special_tokens=True,
+            skip_prompt=True,          # 不输出 prompt
+            skip_special_tokens=True,  # 过滤特殊 token
         )
 
         gen_kwargs = dict(
             **inputs,
             max_new_tokens=cfg.max_tokens,
             do_sample=do_sample,
-            temperature=cfg.temperature,
-            top_p=cfg.top_p,
             repetition_penalty=cfg.repetition_penalty,
             pad_token_id=self.tokenizer.pad_token_id,
             eos_token_id=self.tokenizer.eos_token_id,
             streamer=streamer,
+            use_cache=True,  # ✅
         )
 
-        # 生成放后台线程，主线程从 streamer 迭代输出
+        if do_sample:
+            gen_kwargs.update(
+                temperature=cfg.temperature,
+                top_p=cfg.top_p,
+            )
+
+
         def _worker():
             with torch.no_grad():
                 self.model.generate(**gen_kwargs)

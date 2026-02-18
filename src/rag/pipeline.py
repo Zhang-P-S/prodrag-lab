@@ -27,7 +27,42 @@ def translate_query(query: str, llm, target_lang: str) -> str:
     resp: LLMResponse = llm.generate(messages, GenerateConfig(max_tokens=128, temperature=0.0))
     return resp.text.strip()
 
+def build_rag_messages_strict(query: str, top_chunks: List[Dict[str, Any]]) -> List[ChatMessage]:
+    """
+    严格 RAG 提示词构造：
+    - 强约束：只能基于检索到的 context 回答
+    - 强约束：回答必须带引用 chunk_id（你后续评测 CitePrec 依赖这个）
+    - top_chunks: 每个 chunk 至少包含 {chunk_id, text}，可选包含 {source,page,score}
+    """
 
+    # 组织上下文：把 chunk_id 写清楚，方便模型引用
+    ctx_lines = []
+    for i, ch in enumerate(top_chunks, 1):
+        cid = ch.get("chunk_id") or ch.get("id") or ch.get("chunk") or f"chunk_{i}"
+        text = ch.get("text") or ch.get("content") or ""
+        ctx_lines.append(f"[{cid}]\n{text}".strip())
+
+    context_block = "\n\n".join(ctx_lines).strip()
+
+    system = (
+        "你是一个企业知识库问答助手（RAG）。\n"
+        "规则：\n"
+        "1) 只能使用给定的【检索上下文】作答，不允许使用常识补全或编造。\n"
+        "2) 如果上下文不足以回答，必须明确拒答，并说明缺少哪些信息。\n"
+        "3) 只要回答中出现事实性陈述，必须在句末用 [chunk_id] 形式给出引用；可多个。\n"
+        "4) 不要输出与问题无关的内容。\n"
+    )
+
+    user = (
+        f"【检索上下文】\n{context_block}\n\n"
+        f"【用户问题】\n{query}\n\n"
+        "请严格按规则回答。"
+    )
+
+    return [
+        ChatMessage(role="system", content=system),
+        ChatMessage(role="user", content=user),
+    ]
 def build_prompt(query: str, chunks: List[dict], max_chars: int = 4500) -> str:
     """强制 citations + 允许拒答（严格 JSON 协议）"""
     used = 0
