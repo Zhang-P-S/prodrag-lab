@@ -170,3 +170,75 @@ def run_rag_once(
         "llm_raw": resp.text,
         "llm_meta": resp.meta,
     }
+# 流式输出
+def run_rag_stream(
+    query: str,
+    llm,
+    retriever,
+    dual_lang: bool = True,
+    dense_topk: int = 30,
+    bm25_topk: int = 30,
+    merge_topk: int = 60,
+    rerank_topk: int = 8,
+):
+    """
+    ✅ 真·流式 RAG（generator）
+    - 对外：yield 文本 token
+    - 内部：同时收集 answer / citations / top_chunks
+    """
+
+    # ---------- 1) 双语 query ----------
+    translated = None
+    if dual_lang:
+        if is_likely_english(query):
+            translated = translate_query(query, llm, target_lang="zh")
+        else:
+            translated = translate_query(query, llm, target_lang="en")
+
+    # ---------- 2) retrieve ----------
+    top_chunks = retriever.retrieve(
+        query=query,
+        translated_query=translated,
+        dense_topk=dense_topk,
+        bm25_topk=bm25_topk,
+        merge_topk=merge_topk,
+        rerank_topk=rerank_topk,
+    )
+
+    # ---------- 3) prompt ----------
+    # prompt = build_prompt(query, top_chunks)
+
+    # messages = [
+    #     ChatMessage(role="system", content="你是一个严谨的医学问答助手，只输出最终答案。"),
+    #     ChatMessage(role="user", content=prompt),
+    # ]
+    messages = build_rag_messages_strict(query, top_chunks)
+
+    # ---------- 4) 真正的流式输出 ----------
+    answer_chunks = []
+    # yield "[DEBUG] start streaming\n"
+    for delta in llm.stream_generate(
+        messages,
+        GenerateConfig(max_tokens=512, temperature=0.2),
+    ):
+        answer_chunks.append(delta)
+        yield delta   # 🔥 关键：对外 yield
+
+    # ---------- 5) 结束标记 ----------
+    yield "\n"  # 给 CLI 一个自然的结束换行
+
+    # ---------- 6) 把结构化结果“塞”在 generator 的属性里 ----------
+    final_answer = "".join(answer_chunks).strip()
+
+    run_rag_stream.last_result = {
+        "answer": final_answer,
+        "citations": [c["chunk_id"] for c in top_chunks if c.get("chunk_id")],
+        "top_chunks": [
+            {
+                "chunk_id": c.get("chunk_id"),
+                "page": c.get("page"),
+                "rerank_score": float(c.get("rerank_score", 0.0)),
+            }
+            for c in top_chunks
+        ],
+    }
