@@ -2,3 +2,28 @@
 data/index/
 data/processed/
 data/raw/
+# python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# env
+.venv/
+venv/
+.env
+
+# temp files
+Untitled
+*.log
+
+# archives
+*.tgz
+*.zip
+*.tar.gz
+
+# model weights
+*.pt
+*.pth
+*.bin
+*.ckpt
+*.safetensors
