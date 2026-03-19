@@ -1,0 +1,2 @@
+Setting,N,Recall@10,MRR@10,CitePrec(Ev),CitationSupport,GoldHit,CitePrec(Gold),CiteRec(Gold),CiteF1(Gold),RefusalRate(pred),RefusalPrec,RefusalRec,RefusalF1,ParseOK,AutoFill,NoCite,BadEvidence,HallucRate,AvgLatency(ms)
+sft_localv1,96,0.292,0.260,0.083,0.083,0.031,0.031,0.031,0.031,0.792,1.000,0.962,0.981,0.333,0.000,0.823,0.450,0.600,30819.828

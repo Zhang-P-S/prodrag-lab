@@ -16,6 +16,7 @@ import time
 from dataclasses import dataclass
 from typing import Any, Dict, List, Optional, Tuple
 from pathlib import Path
+from concurrent.futures import ThreadPoolExecutor, as_completed
 import yaml
 
 # 复用你项目里的组件
@@ -459,6 +460,7 @@ def main() -> None:
     eval_cfg = cfg.get("eval", {}) or {}
     paths_cfg = cfg.get("paths", {}) or {}
     retrieval_cfg = cfg.get("retrieval", {}) or {}
+    rerank_cfg = cfg.get("rerank", {}) or {}
     controls_cfg = cfg.get("controls", {}) or {}
     dual_lang = bool(eval_cfg.get("dual_lang", True))
 
@@ -487,19 +489,37 @@ def main() -> None:
     if not index_root:
         raise ValueError("Missing config: paths.index_dir (or retrieval.index_dir/index_root)")
 
+    dense_cfg = retrieval_cfg.get("dense", {}) or {}
+
+    embed_model_zh = (
+        retrieval_cfg.get("embed_model_zh")
+        or dense_cfg.get("model_zh")
+        or "BAAI/bge-small-zh-v1.5"
+    )
+    embed_model_en = (
+        retrieval_cfg.get("embed_model_en")
+        or dense_cfg.get("model_en")
+        or "BAAI/bge-small-en-v1.5"
+    )
+    reranker_name = (
+        retrieval_cfg.get("reranker_name")
+        or rerank_cfg.get("model_name")
+        or "BAAI/bge-reranker-base"
+    )
+
     retriever = DualIndexHybridRetriever(
         index_root=index_root,
-        embed_model_zh=retrieval_cfg.get("embed_model_zh", "BAAI/bge-small-zh-v1.5"),
-        embed_model_en=retrieval_cfg.get("embed_model_en", "BAAI/bge-small-en-v1.5"),
-        reranker_name=retrieval_cfg.get("reranker_name", "BAAI/bge-reranker-base"),
+        embed_model_zh=embed_model_zh,
+        embed_model_en=embed_model_en,
+        reranker_name=reranker_name,
     )
 
     retrieve_kwargs = dict(
-        dense_topk=int(retrieval_cfg.get("dense_topk", 30)),
+        dense_topk=int(retrieval_cfg.get("dense_topk", retrieval_cfg.get("dense", {}).get("topk", 30))),
         bm25_topk=int(retrieval_cfg.get("bm25_topk", 30)),
-        merge_topk=int(retrieval_cfg.get("merge_topk", 60)),
+        merge_topk=int(retrieval_cfg.get("merge_topk", retrieval_cfg.get("fusion", {}).get("rrf_k", 60))),
         fusion_topk=int(retrieval_cfg.get("fusion_topk", 120)),
-        rerank_topk=int(retrieval_cfg.get("rerank_topk", 8)),
+        rerank_topk=int(retrieval_cfg.get("rerank_topk", rerank_cfg.get("topk", 8))),
         enable_rerank=bool(controls_cfg.get("enable_rerank", True)),
 
         # ✅ 新增：en/zh 候选池与最终 topK 的“保底配额”参数（防止 arxiv 被 pdf 挤出 topK）
@@ -526,48 +546,101 @@ def main() -> None:
 
     print(f"[eval_run] setting={setting} qa={qa_path} out={out_path} items={len(qa_items)}")
 
-    # 注意：这里仍然是写模式；但 resolve_out_path 已经默认避免覆盖
-    for i, item in enumerate(qa_items, 1):
-        qid = item.get("qid")
-        if qid in done_qids:
-            continue
-        question = item.get("question")
+    # 支持断点续跑：过滤掉已经完成的样本
+    pending_items = [it for it in qa_items if it.get("qid") not in done_qids]
+    total_pending = len(pending_items)
 
-        gold_citations = item.get("gold_citations", [])
+    # 可配置并行度：eval.num_workers，默认 1（兼容旧行为）
+    num_workers = int(eval_cfg.get("num_workers", 1))
+    if num_workers <= 1:
+        # 兼容原来的串行逻辑
+        for i, item in enumerate(pending_items, 1):
+            qid = item.get("qid")
+            question = item.get("question")
+            gold_citations = item.get("gold_citations", [])
 
-        one = run_one(
-            llm,
-            retriever,
-            controls,
-            question,
-            dual_lang=bool(eval_cfg.get("dual_lang", True)),
-            retrieve_topk=retrieve_topk,
-            gen_cfg=gen_cfg,
-            retrieve_kwargs=retrieve_kwargs,
-        )
+            one = run_one(
+                llm,
+                retriever,
+                controls,
+                question,
+                dual_lang=bool(eval_cfg.get("dual_lang", True)),
+                retrieve_topk=retrieve_topk,
+                gen_cfg=gen_cfg,
+                retrieve_kwargs=retrieve_kwargs,
+            )
 
-        row = {
-            "qid": qid,
-            "setting": setting,
-            "question": question,
-            "gold_citations": gold_citations,
-            "final_refusal": one["final_refusal"],
-            "model_refusal": one["model_refusal"],
-            "forced_refusal": one["forced_refusal"],
-            "answer": one["answer"],
-            "used_citations": one["used_citations"],
-            "retrieved_chunk_ids": one["retrieved_chunk_ids"],
-            "top1_score": one["top1_score"],
-            "refusal_threshold": one["refusal_threshold"],
-            "timing_ms": one["timing_ms"],
-            "wall_ms": one["wall_ms"],
-            "llm_parse_meta": one["llm_parse_meta"],
-            "llm_raw": one["llm_raw"],
-        }
-        write_jsonl_append(out_path, row)
+            row = {
+                "qid": qid,
+                "setting": setting,
+                "question": question,
+                "gold_citations": gold_citations,
+                "final_refusal": one["final_refusal"],
+                "model_refusal": one["model_refusal"],
+                "forced_refusal": one["forced_refusal"],
+                "answer": one["answer"],
+                "used_citations": one["used_citations"],
+                "retrieved_chunk_ids": one["retrieved_chunk_ids"],
+                "top1_score": one["top1_score"],
+                "refusal_threshold": one["refusal_threshold"],
+                "timing_ms": one["timing_ms"],
+                "wall_ms": one["wall_ms"],
+                "llm_parse_meta": one["llm_parse_meta"],
+                "llm_raw": one["llm_raw"],
+            }
+            write_jsonl_append(out_path, row)
 
-        if i % 10 == 0:
-            print(f"[eval_run] {i}/{len(qa_items)} done")
+            if i % 10 == 0:
+                print(f"[eval_run] {i}/{total_pending} done")
+    else:
+        print(f"[eval_run] parallel mode, num_workers={num_workers}, pending={total_pending}")
+
+        def _process_item(item: Dict[str, Any]) -> Dict[str, Any]:
+            qid = item.get("qid")
+            question = item.get("question")
+            gold_citations = item.get("gold_citations", [])
+
+            one = run_one(
+                llm,
+                retriever,
+                controls,
+                question,
+                dual_lang=bool(eval_cfg.get("dual_lang", True)),
+                retrieve_topk=retrieve_topk,
+                gen_cfg=gen_cfg,
+                retrieve_kwargs=retrieve_kwargs,
+            )
+
+            return {
+                "qid": qid,
+                "setting": setting,
+                "question": question,
+                "gold_citations": gold_citations,
+                "final_refusal": one["final_refusal"],
+                "model_refusal": one["model_refusal"],
+                "forced_refusal": one["forced_refusal"],
+                "answer": one["answer"],
+                "used_citations": one["used_citations"],
+                "retrieved_chunk_ids": one["retrieved_chunk_ids"],
+                "top1_score": one["top1_score"],
+                "refusal_threshold": one["refusal_threshold"],
+                "timing_ms": one["timing_ms"],
+                "wall_ms": one["wall_ms"],
+                "llm_parse_meta": one["llm_parse_meta"],
+                "llm_raw": one["llm_raw"],
+            }
+
+        completed = 0
+        # 由主线程统一写文件，避免多线程并发写同一个 jsonl
+        with ThreadPoolExecutor(max_workers=num_workers) as ex:
+            future_to_qid = {ex.submit(_process_item, it): it.get("qid") for it in pending_items}
+            for fut in as_completed(future_to_qid):
+                row = fut.result()
+                write_jsonl_append(out_path, row)
+                completed += 1
+                if completed % 10 == 0:
+                    print(f"[eval_run] {completed}/{total_pending} done (parallel)")
+
     print(f"[OK] wrote: {out_path}")
 
 

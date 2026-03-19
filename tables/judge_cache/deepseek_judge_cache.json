@@ -1,0 +1,806 @@
+{
+  "855446c7514da5c1eaab63ab7dc12ea3d4a79ee0": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the evidence and the question. It discusses mathematical concepts not present in the provided text."
+  },
+  "c5713a361a173c414d10529345003ded55f72acb": {
+    "score": 0.0,
+    "reason": "The model answer lists a completely different set of authors not found in the Evidence. The Evidence provides the correct authors for the specified paper."
+  },
+  "d80f22e1a51cbaa31aaaf397a804cb2a87c7507f": {
+    "score": 0.0,
+    "reason": "The model answer is a list of author names and a year, which is completely unrelated to the question and is not supported by the provided Evidence."
+  },
+  "f57ce1f7de285b9a0efda7d764554b804d22e126": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question and is not supported by the Evidence. The Evidence contains three arXiv preprints from 2025, but the model answer does not list any of their fi"
+  },
+  "b6c48ee49f98ecfd788b06c0f98f28f923385d99": {
+    "score": 0.0,
+    "reason": "The model answer is about pTRS and drug candidate assessment, which is completely unrelated to the Evidence. The Evidence describes hyperparameter settings for Experiment 1, which the answer does not "
+  },
+  "49b19c7ac07b274426e6e31de564892903130952": {
+    "score": 0.0,
+    "reason": "The model answer describes a different dataset composition not mentioned in the Evidence. The Evidence defines PMC-MI as a multi-image dataset and benchmark, with no reference to MedMCQA, MedQA, or tr"
+  },
+  "963fd0f3bfd4344c1afc4329061a879e107b4c36": {
+    "score": 0.0,
+    "reason": "The model answer discusses ST-PPO and PPO training curves, which are not mentioned in the Evidence. The Evidence only describes LM_ep2, LM_ep5, Instruction_ep2, and Instruction_ep5 strategies."
+  },
+  "1f726422a33086fe3b1ef2d48a1f3f2eec99ed3c": {
+    "score": 0.0,
+    "reason": "The model answer discusses an unrelated topic (Echo-CoPilot architecture) not mentioned in the Evidence. The Evidence only provides information about the authors and conference for the paper 'Superfil"
+  },
+  "4582f1a5459418f03bdbd07c7764e5e6d4906013": {
+    "score": 0.0,
+    "reason": "The model answer discusses a different task (MedAbstain) and concept entirely. The Evidence only describes four student proficiency configurations (p0, plow, pmid, phigh) for conditioning a model's ge"
+  },
+  "684854305cb6d093051810e34decd462cc220c1c": {
+    "score": 0.0,
+    "reason": "The model answer discusses LLMs, TCM translation, and cognitive transfer, which are completely unrelated to the Evidence. The Evidence only describes a framework named PRISM for interpretability and t"
+  },
+  "93efc8a2c3f8a783010bdd802cc10911ecff65aa": {
+    "score": 0.0,
+    "reason": "The model answer incorrectly states that p-values are provided for each user group separately. The Evidence provides only a single p-value for each condition (e.g., Sleep Disorder: < 0.001) across the"
+  },
+  "81ce540714263104eae79913dacb7e48f003cb52": {
+    "score": 0.0,
+    "reason": "The model answer cites a 2022 author list not present in the Evidence. The Evidence discusses prompting strategies from Kotha et al., 2025, and others, and describes a final setup using specific promp"
+  },
+  "f33d121442ca6b13e22aaf0e9fdcc52d550b9fe7": {
+    "score": 0.0,
+    "reason": "The model answer discusses a different paper, author, and topic not mentioned in the Evidence. The Evidence provides the requested mean length (65.8±50.4 words, 4.7±3.0 sentences), but the model answe"
+  },
+  "76da245857bfc3f51d1b7754271b4a31d53b9c70": {
+    "score": 0.0,
+    "reason": "The model answer discusses a completely unrelated topic (client attribution in federated learning), which is not mentioned in the Evidence. The Evidence states Liu et al. (2024) is most similar for pe"
+  },
+  "937ccbe127808bcf5ad6b647e9dc697de37dbba9": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question and is not supported by the provided Evidence. The Evidence contains the correct authors and conference for the paper in question, but the mode"
+  },
+  "59081daea78bc4044f2262939a20815c8cff319f": {
+    "score": 0.0,
+    "reason": "The model answer discusses multi-agent reasoning challenges, which is completely unrelated to the Evidence about fine-tuning strategies for Llama 3-13B on the BHC dataset."
+  },
+  "d751c57b6b7fcbe3155c0d6e3b92dfba87a12058": {
+    "score": 0.0,
+    "reason": "The model answer discusses an unrelated paper and dataset; it contains no information from the provided Evidence about the PMC-MI dataset or the gap it addresses."
+  },
+  "e73e2d523f8a4752c4d05a245f977ecb9b5f616b": {
+    "score": 0.0,
+    "reason": "Model answer discusses few-shot prompting, which is not mentioned in the Evidence. The Evidence states the constraint helps preserve 'institution-agnostic generalization capabilities' by disrupting learned shortcuts."
+  },
+  "b67d1f2526f6e77e3cf20c08a5bbb801cb2096ab": {
+    "score": 0.0,
+    "reason": "The model answer discusses a challenge in planning and credit assignment, which is completely unrelated to the question about the paper's authors. The provided Evidence lists the authors, but the model answer does not address the question a"
+  },
+  "5a513c9ad519a38f1686ae0fb5c654d2a58fa884": {
+    "score": 0.0,
+    "reason": "The model answer discusses unrelated content (LLM-as-a-judge, small samples) not found in the Evidence. It fails to address the question about metrics where BUSTR achieves highest precision according to BUS-BRA results."
+  },
+  "c3ec5b9ddb66cddeccb9dbcbfd7cdd54dc075a62": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question and is not supported by the Evidence. The Evidence contains three arXiv preprints with first authors Peng Xia, Yi Yang, and Yixin Ye, but the model answer discusses patient intent cat"
+  },
+  "e92645f5cab8ba865dcb937c38b37ff7b4588b6a": {
+    "score": 0.0,
+    "reason": "The model answer discusses an unrelated 'Agent-as-a-Judge' paradigm, while the Evidence specifies hyperparameters for Experiment 1: do_sample=False, temperature/top_p/top_k=None, length_penalty=1.0, repetition_penalty=1.2."
+  },
+  "27ae3190d6403e361aa1376414deb365fcbd7d19": {
+    "score": 0.0,
+    "reason": "The model answer discusses conditions for a 'White subgroup,' which is not mentioned in the Evidence. The Evidence provides p-values for sleep disorder, depression, and obesity across opioid, recovered, and normal user groups, all of which "
+  },
+  "0a2e9d3473653a927e62919deba8b34b38243d9c": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question and is not supported by the provided Evidence."
+  },
+  "58cf3f8060be27ff83696e7f4ad07980531a1ebe": {
+    "score": 0.0,
+    "reason": "Model answer discusses performance metrics not present in Evidence. Evidence describes four student proficiency configurations (Baseline/p0, plow, pmid, phigh), which the model answer does not mention."
+  },
+  "09ebb45942b81e30f4f86b59d271add2d6b2c18b": {
+    "score": 0.0,
+    "reason": "The model answer discusses an unrelated performance metric and does not address the question about the paper's authors and conference."
+  },
+  "c8545f3e5697b769976c2b45a1da952e5e78508e": {
+    "score": 0.0,
+    "reason": "The model answer describes a multi-stage retrieve and re-rank model for medical coding, which is completely unrelated to the Evidence provided about prompting strategies for claim generation."
+  },
+  "375a57dbba13c9d614ec501e58d381804668b08b": {
+    "score": 0.0,
+    "reason": "The model answer discusses a funding source and award amount, which is not addressed in the provided Evidence. The Evidence only describes dataset characteristics, specifically the mean length of physician responses in words and sentences."
+  },
+  "a7f075d1683daa5fc41531c68ebf648ab925f09a": {
+    "score": 0.0,
+    "reason": "The model answer is unrelated to the provided Evidence. The Evidence describes hyperparameters for Experiment 1, while the model answer cites an incorrect title."
+  },
+  "2c5ccebf716e95efe7d04c32163c682d854c79e0": {
+    "score": 0.0,
+    "reason": "Model answer discusses Figure 3 and exact match ratios, which are not mentioned in the Evidence. The Evidence discusses preserving institution-agnostic generalization capabilities, which the model answer does not address."
+  },
+  "a4b1207ee7320f3b13a51c112eff56c9e9b52f69": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question and evidence. The evidence states Liu et al. (2024) is most similar for performing SFT of a Llama model and evaluating on a small test set. The model answer describes an unrelated lea"
+  },
+  "ed7702ec116e4f9452c4f1d27e9a9c5077a86b97": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question and is not supported by the provided Evidence. The Evidence clearly lists the authors for the specified paper, but the model answer states a different paper title."
+  },
+  "d224c7597f3d71028bf359b7994ffda560f803a2": {
+    "score": 0.0,
+    "reason": "The model answer discusses a weighted metric HHλ unrelated to the question about BUS-BRA results and BUSTR's precision. No part of the answer is supported by the provided Evidence."
+  },
+  "ec19bc48511c636c6b699d89d21fc41158a7ca79": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated and unsupported by the Evidence. The Evidence describes the PMC-MI dataset as a multi-image training dataset and benchmark, while the model answer provides an unrelated mathematical formula."
+  },
+  "9b81510de2e63482c23fe04c5de6f28a83e86edf": {
+    "score": 0.0,
+    "reason": "The model answer discusses 'Inference scores' and 'judge LLM', which are not mentioned in the Evidence. The Evidence only describes fine-tuning strategies (LM_ep2, LM_ep5, Instruction_ep2, Instruction_ep5) for Llama 3-13B on the BHC dataset"
+  },
+  "5364cf575ed11386265b8972e5d2743bc93e1a54": {
+    "score": 0.0,
+    "reason": "The model answer 'HateXplain: A Benchmark Dataset for Explainable Hate Speech Detection.' is completely unrelated to the question and is not supported by the provided Evidence. The Evidence contains three arXiv preprints from 2025, but the "
+  },
+  "131a00cf52269bfdb9351c261c448fc3d863fcb7": {
+    "score": 0.0,
+    "reason": "模型回答与证据内容完全无关，证据中未提及任何关于抽取断言的内容。"
+  },
+  "c22857b10ec4c95f882c41547e1c21bb1e5b8704": {
+    "score": 0.0,
+    "reason": "The model answer discusses pTRS in drug development, which is completely unrelated to the Evidence about hyperparameter settings for Experiment 1."
+  },
+  "a10452e46822aa3ee2dbf992831d3082f08a391f": {
+    "score": 0.0,
+    "reason": "The model answer discusses an unrelated medical AI system (Echo-CoPilot) and contains no information from the provided Evidence about the paper's authors or conference."
+  },
+  "a32d9da0ef96a993e8649b9820c743c97146bfdb": {
+    "score": 0.0,
+    "reason": "Model answer discusses unrelated paper (Recdroid+) and authors, which is completely absent from and unsupported by the provided Evidence."
+  },
+  "4a961685289361eaebd4c7d316a49289a163b3bb": {
+    "score": 0.0,
+    "reason": "The model answer discusses 'Recdroid+' and 'Yu Zhao', which are not mentioned in the provided Evidence. The Evidence only contains author lists for three different papers, none of which match the model answer."
+  },
+  "fefcab34b9292875332f20642753e4e7659f0760": {
+    "score": 0.0,
+    "reason": "The model answer discusses an unrelated technical definition, while the Evidence only reports on BUSTR's precision metrics for BI-RADS, pathology, and histology on BUS-BRA. There is no overlap or support."
+  },
+  "ae7bb2dfc51ac7b89467545142c0ab85f9da9b16": {
+    "score": 0.0,
+    "reason": "The model answer describes a different dataset composition not mentioned in the Evidence. The Evidence defines PMC-MI as a multi-image dataset and benchmark, with no details on MedMCQA, MedQA, language splits, or trace counts."
+  },
+  "87b3db40ff01ea1979737531b4ec6f8d69077de7": {
+    "score": 0.0,
+    "reason": "The model answer discusses ST-PPO and PPO, which are not mentioned in the Evidence. The Evidence only describes LM_ep2, LM_ep5, Instruction_ep2, and Instruction_ep5 strategies for fine-tuning Llama 3-13B on the BHC dataset."
+  },
+  "ed4184c2ace948caf1fe6306e0d0b1ba53c5cdb9": {
+    "score": 0.0,
+    "reason": "The model answer discusses MedAbstain and medical safety, which is completely unrelated to the Evidence about student proficiency configurations."
+  },
+  "bbdd34cafc5c45b6dc9e19229502b66313b773a1": {
+    "score": 0.0,
+    "reason": "The model answer discusses an unrelated paper and author not mentioned in the Evidence. The Evidence is about prompting strategies for claim generation."
+  },
+  "f5383aacf15ba4fc9b813b12343514b615a463d8": {
+    "score": 0.0,
+    "reason": "The model answer discusses LLMs and TCM translation, which is completely unrelated to the Evidence. The Evidence only mentions the proposed framework PRISM for interpretability and trustworthiness."
+  },
+  "85f55d7f0075465426f1180f65f4817234410801": {
+    "score": 0.0,
+    "reason": "The model answer discusses a different paper and topic (social determinants of health) not mentioned in the Evidence. The Evidence only describes characteristics of a dataset of physician and patient messages."
+  },
+  "e3d7ad2224403bb791e7d7b1926799392075877c": {
+    "score": 0.0,
+    "reason": "The model answer discusses an unrelated topic (evaluation of sentence structure with GPT-4.1-mini) and does not provide the requested p-values. The Evidence clearly lists the p-values for sleep disorder, depression, and obesity as < 0.001 f"
+  },
+  "867cd206f35f5bf2f0f25dba6fd6f0ca48a3139b": {
+    "score": 0.0,
+    "reason": "The model answer discusses a different topic (ProToken and training data attribution) not mentioned in the Evidence. The Evidence states Liu et al. (2024) is most similar for performing SFT of a Llama model and evaluating on a small test se"
+  },
+  "d73d7724a4d7dcd0e6c10e5315168aea06964522": {
+    "score": 0.0,
+    "reason": "The model answer discusses adversarial exploitation and model performance, which is completely unrelated to the question about the authors and conference of the specified paper. No part of the answer is supported by the provided Evidence."
+  },
+  "72096506987a33d424b4bb6edfe9edee3aa29faa": {
+    "score": 0.0,
+    "reason": "The model answer discusses an unrelated 'Agent-as-a-Judge paradigm,' while the Evidence only provides hyperparameter settings for Experiment 1 (do sample=False, temperature/top p/top k=None, length penalty=1.0, repetition penalty=1.2)."
+  },
+  "f169aab3742ecf105492b091aa01dcab221bb2c2": {
+    "score": 0.0,
+    "reason": "The model answer discusses a different topic (agentic reasoning) and is not supported by the provided Evidence, which identifies the authors of the specified paper."
+  },
+  "dc5d9624d5d306291e5a2bd30c2638ff8e4044d8": {
+    "score": 0.0,
+    "reason": "The model answer discusses limitations of evaluation methods, which is not addressed in the provided Evidence. The Evidence only reports performance results for BUSTR on specific metrics."
+  },
+  "b18211fd0b01bdd1f298b4bfdcc35b28faaffc04": {
+    "score": 0.0,
+    "reason": "The model answer discusses multi-agent systems, which is completely unrelated to the Evidence about fine-tuning strategies for Llama 3-13B on the BHC dataset."
+  },
+  "13c89850ca3484c7492ffb0b95bffa60b3897ccc": {
+    "score": 0.0,
+    "reason": "Model answer describes 'few-shot prompting' and 'certified medical coder' role, which are completely absent from and unrelated to the provided Evidence. The Evidence discusses preserving 'institution-agnostic generalization capabilities' th"
+  },
+  "c5bbf65bb20d6a71be88806ae1ba42de00004dfa": {
+    "score": 0.0,
+    "reason": "The model answer discusses medical history collection, which is completely unrelated to the Evidence about arXiv preprint authors."
+  },
+  "70d5db03ec748bb509e1826d9564c15a4d5c631a": {
+    "score": 0.0,
+    "reason": "The model answer cites an unrelated paper and authors, providing no information about the PMC-MI dataset or the gap it addresses, which is entirely unsupported by the provided Evidence."
+  },
+  "a5e42abbf4944b18eb9d275586a7e3e10944cfda": {
+    "score": 0.0,
+    "reason": "The model answer discusses diseases in a white population, which is unrelated to the provided Evidence on p-values for sleep disorder, depression, and obesity across opioid user groups."
+  },
+  "fe43f486aca65a904ef9a8998f91fa5e1f411470": {
+    "score": 0.0,
+    "reason": "The model answer discusses performance metrics on QA tasks, which is completely unrelated to the question about the four student proficiency configurations. No part of the answer is supported by the provided Evidence."
+  },
+  "40f29992212daa38cacd67b2fbe0520054f90660": {
+    "score": 0.0,
+    "reason": "The model answer discusses unrelated authors and papers, which are not mentioned in the provided Evidence. The Evidence is exclusively about prompting strategies for claim generation."
+  },
+  "c7a393d7f13ebf88e5035099049da8d8eeb3a773": {
+    "score": 0.0,
+    "reason": "The model answer '资料不足' (insufficient information) is incorrect. The Evidence explicitly provides the mean length of physician responses as 65.8±50.4 words and 4.7±3.0 sentences."
+  },
+  "b5678289cef2d044f746ae6fae6c582b6f007e4f": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question and evidence provided. The evidence discusses a framework named PRISM for interpretability, while the model answer discusses medical classification criteria."
+  },
+  "b91f933ccbdb979885e3ff243c8e1b9157c1acae": {
+    "score": 0.0,
+    "reason": "The model answer claims insufficient evidence, but the Evidence explicitly provides the hyperparameter settings for Experiment 1."
+  },
+  "fcb5ad9ea53ba17155817a6d55bdd732ed0c5a78": {
+    "score": 0.0,
+    "reason": "The model answer discusses unrelated metrics (anxiety forgetting rate, MHQA evaluation) not found in the provided Evidence. The Evidence contains the requested author and conference information for the specified paper."
+  },
+  "558902b934ef8d1f067c3a5b323a59690021ffd8": {
+    "score": 0.0,
+    "reason": "Model answer discusses Figure 3 and exact match ratios, which are not mentioned in the Evidence. The Evidence states the constraint helps preserve 'institution-agnostic generalization capabilities'."
+  },
+  "383db3bb1368205a2c8dcd3b79af1b77039d2397": {
+    "score": 0.0,
+    "reason": "The model answer discusses a Probabilistic Process Supervision framework and Path Faithfulness Reward, which are not mentioned in the provided Evidence. The Evidence states that Liu et al. (2024) is most similar to the authors' work for per"
+  },
+  "7d31f741c29efd9e33b2757cb695b1321d9326a9": {
+    "score": 0.0,
+    "reason": "The model answer lists authors Xindi Wang, Robert E. Mercer, and Frank Rudzicz, which are not present in the provided Evidence. The Evidence only lists authors for the specific paper in question: Xinhao Chen, Chong Yang, Man Lan, Li Cai, Ya"
+  },
+  "1ae8070a1a4a99cf601c6d3b9a81b1f4a8fb1204": {
+    "score": 0.0,
+    "reason": "The model answer discusses 'Inference scores' and model reasoning support, which is completely unrelated to the Evidence about fine-tuning strategies for Llama 3-13B on the BHC dataset."
+  },
+  "4fcc84fed5b8fca385e3749c5218840cacd846d8": {
+    "score": 0.0,
+    "reason": "The model answer discusses pruning importance scores for K projections, which is completely unrelated to the Evidence about the PMC-MI dataset and its purpose."
+  },
+  "0f4187dbdf90c5a9b3e4a8c4f0f1498ea2bd333d": {
+    "score": 0.0,
+    "reason": "Model answer 'ToxiGen' is not mentioned in the Evidence. The Evidence lists first authors Peng Xia, Yi Yang, and Yixin Ye for three arXiv preprints."
+  },
+  "df1d065b832cb864310dd605d3b6f85dc80db5b7": {
+    "score": 0.0,
+    "reason": "The model answer discusses a formula for a weighted metric 'HHλ' unrelated to the question about BUS-BRA results and BUSTR's precision metrics. No part of the answer is supported by the provided Evidence."
+  },
+  "ba985e5f4a35612073dadd6e9315251070fd63d3": {
+    "score": 0.0,
+    "reason": "The model answer discusses a medical diagnostic procedure for retinal disease, which is completely unrelated to the provided Evidence about p-values for sleep disorder, depression, and obesity across user groups."
+  },
+  "d544d0634a020094f51f2800052713715de3191d": {
+    "score": 0.0,
+    "reason": "The model answer discusses limitations of prior work in a different domain, which is not mentioned in the provided Evidence. The Evidence is exclusively about prompting strategies for claim generation."
+  },
+  "a7d8d977f34dfcdb7bb7115e0d7908e16ff99636": {
+    "score": 0.0,
+    "reason": "The model answer discusses CoT-style prompting and model performance, which is unrelated to the question about the four student proficiency configurations. The Evidence explicitly lists Baseline (p0), Low-Proficiency (plow), Average-Profici"
+  },
+  "936bf1da7c3911efa1c4d074c0d83d4a69007222": {
+    "score": 0.0,
+    "reason": "The model answer discusses a cancer diagnosis, which is not mentioned in the provided Evidence. The Evidence only describes the mean length of physician responses in words and sentences."
+  },
+  "42c94ef8650f656d196274ca48770067b785820f": {
+    "score": 0.0,
+    "reason": "The model answer lists incorrect authors not found in the Evidence. The Evidence provides the correct authors and conference for the specified paper."
+  },
+  "46dac51e4059acc9dc169036b7bdffa2db16e898": {
+    "score": 0.0,
+    "reason": "The model answer discusses a qualitative review of GPT's performance, which is not mentioned in the Evidence. The Evidence only describes a proposed framework named PRISM to address interpretability and trustworthiness."
+  },
+  "6502452262dc9bffb083c02cb2a4d870f299e73e": {
+    "score": 0.0,
+    "reason": "Model answer discusses CTDE and evolutionary mechanisms, which are completely unrelated to the hyperparameter settings for Experiment 1 provided in the Evidence."
+  },
+  "7db2f9618a4ffa07d467db0012b434a8a8340902": {
+    "score": 0.0,
+    "reason": "The model answer discusses a different question and evidence about a corpus and evaluation for future research, which is completely unrelated to the provided Evidence about SFT of a Llama model and evaluation on a small test set. The answer"
+  },
+  "1a019f8d01268285a4cd128b7e9a96fda512a4fd": {
+    "score": 0.0,
+    "reason": "The model answer discusses applications of LLMs in pediatric medicine, which is completely unrelated to the Evidence. The Evidence is about preserving generalization capabilities by constraining fine-tuning, with no mention of pediatrics, m"
+  },
+  "23550904ebbe0651c88acc9ad52c485e47fc17f1": {
+    "score": 0.0,
+    "reason": "The model answer lists languages, but the question asks for the authors of a specific paper. The provided Evidence contains the correct authors for that paper, but the model answer does not address the question at all and is entirely unsupp"
+  },
+  "b861326e2a8bba2ddfa31c375082581b369c14cc": {
+    "score": 0.0,
+    "reason": "The model answer discusses TCM learning methods, which is completely unrelated to the Evidence about BUSTR's precision metrics on BUS-BRA."
+  },
+  "962c2086a733252bdc93546b7d840ea8c1f5ba00": {
+    "score": 0.0,
+    "reason": "Model answer discusses self-evolving agentic reasoning, which is completely unrelated to the evidence about fine-tuning strategies for Llama 3-13B on the BHC dataset."
+  },
+  "56e00b8c7aca73044fbb16dacb4b41dcc66534c5": {
+    "score": 0.0,
+    "reason": "The model answer discusses a Tanh activation function and latent variables, which are completely unrelated to the Evidence about the PMC-MI dataset and its purpose."
+  },
+  "70047113c84dee4e6a85e5e2ef7d142ead5cf60b": {
+    "score": 0.0,
+    "reason": "The model answer discusses emotional self-awareness and decision-making, which is completely unrelated to the evidence provided. The evidence lists arXiv preprints and their authors, not the topic in the model answer."
+  },
+  "9df5df6f7aa54f715dc9f25b097c5bd5aa6f8443": {
+    "score": 0.0,
+    "reason": "The model answer discusses unrelated concepts (node inheritance, diagnostic states) and provides no p-values for the specified conditions and user groups, which are all clearly stated in the Evidence."
+  },
+  "b092d85bc0dd9bce5fce8ce5a3b20567d54557f7": {
+    "score": 0.0,
+    "reason": "The model answer discusses a 'reward function R_cold' which is not mentioned in the provided Evidence. The Evidence is about prompting strategies and claim generation setup."
+  },
+  "ef131a43c992d72f92acd2c7e4a6398f97800496": {
+    "score": 0.0,
+    "reason": "The model answer discusses an operating point (α = 1.0) and metrics, which is not mentioned in the Evidence. The Evidence describes four student proficiency configurations (p0, plow, pmid, phigh), which the model answer completely fails to "
+  },
+  "2a1ff2e4e3e401879d6b81a36e52cea919a95ac2": {
+    "score": 1.0,
+    "reason": "The model answer correctly lists all authors and the conference (ACL 2024) exactly as stated in the provided Evidence."
+  },
+  "6a9ad856743899bcea2bd7b6ba4aba5ec8ae17f0": {
+    "score": 0.0,
+    "reason": "The model answer discusses endometrial cancer symptoms, which is completely unrelated to the provided Evidence about SFT of Llama models and evaluation methods."
+  },
+  "94892e3d8bba41618d27f505c527f7dd110dcd63": {
+    "score": 0.0,
+    "reason": "The model answer discusses terminology choices ('seeker', 'responder') and ethical considerations, which are not addressed in the provided Evidence. The Evidence only provides the mean length of physician responses (65.8±50.4 words, 4.7±3.0"
+  },
+  "e75c5d68c7f79619593877feed1ab86e6b254de6": {
+    "score": 0.0,
+    "reason": "The model answer discusses F1 scores on a medical dataset, which is completely unrelated to the Evidence. The Evidence only describes a proposed framework named PRISM for interpretability and trustworthiness."
+  },
+  "5c51ccc3ac8d0eb96f0246f9ba4d968a0e42a10a": {
+    "score": 1.0,
+    "reason": "The model answer correctly and fully restates the claim from the Evidence: that the constraint helps preserve 'institution-agnostic generalization capabilities by disrupting the learned shortcuts often associated with competitive benchmark "
+  },
+  "b9253544d0f2b8e217e8199bf27ce93b831ac8e9": {
+    "score": 1.0,
+    "reason": "The model answer lists all authors exactly as provided in the Evidence for the specified paper."
+  },
+  "a803d9d13c586062e814e8a6b321ce7364d3aa4f": {
+    "score": 0.5,
+    "reason": "The answer correctly states do_sample=False, temperature/top_p/top_k=None, length penalty=1.0, repetition penalty=1.2, but hallucinates 'max tokens=1500' and 'pad/eos token id=128009', which are not in the Evidence."
+  },
+  "264fd4d888ed478943e23d76d35d110e703205f5": {
+    "score": 1.0,
+    "reason": "The model answer correctly identifies all four strategies (LM_ep2, LM_ep5, Instruction_ep2, Instruction_ep5), accurately states their epoch counts (2 vs. 5), and correctly distinguishes their approaches (post-tuning on plain text vs. instru"
+  },
+  "ae82b3eb5edc1a2aedcdef44091ff507b6c97c44": {
+    "score": 0.0,
+    "reason": "The model answer lists names not present in the Evidence. The correct first authors from the provided arXiv preprints are Peng Xia, Yi Yang, Yixin Ye, and Qiying Yu."
+  },
+  "08279fed4af6d237cf07460ae500975b4edb762e": {
+    "score": 0.5,
+    "reason": "Answer correctly identifies PMC-MI as a large-scale training dataset for medical multi-image MLLMs and the single-image gap. However, it omits the PMC-MI-Bench benchmark, which is a key part of the gap-addressing solution as stated in the E"
+  },
+  "cc9f3d80ed0b0ebafe9437e83a3f3cc0e21e38f4": {
+    "score": 0.5,
+    "reason": "The model answer correctly identifies the three metrics (BI-RADS, pathology, histology) where BUSTR achieves the highest precision, which is supported by the Evidence. However, it hallucinates specific numerical values (0.565, 0.842, 0.508)"
+  },
+  "afef265ed84d813c24c720df1bcec7974aff094a": {
+    "score": 1.0,
+    "reason": "The model answer correctly lists all four configurations (p0, plow, pmid, phigh) as named in the Evidence, with no unsupported claims."
+  },
+  "f6f2b22dc5ac240a021b2644cc6c250e39eb15c4": {
+    "score": 0.0,
+    "reason": "The model answer claims insufficient evidence, but the provided Evidence (Table 7) explicitly lists the p-values for Sleep Disorder, Depression, and Obesity as < 0.001 for all three user groups. The answer is incorrect and unsupported."
+  },
+  "bcde2aa081f3338ff8e8f7cc9effcd978e1c2016": {
+    "score": 1.0,
+    "reason": "The model answer directly quotes the exact mean values (65.8±50.4 words, 4.7±3.0 sentences) provided in the Evidence."
+  },
+  "e72b6a959d90a785463aa45bc3ca1ee4495c2803": {
+    "score": 0.5,
+    "reason": "The answer correctly identifies the explored strategies and the final setup's use of single prompts per label. However, it omits the key detail that for entailed and contradicted claims, the final setup specifically used 1-shot prompting wi"
+  },
+  "42c8cb7e5eb28617c36a1806fe6eb4e1897d4b63": {
+    "score": 0.0,
+    "reason": "The model answer states 'unified interpretability framework', but the Evidence explicitly names the framework as 'Probability Reconstruction via Shapley Measures (PRISM)'. The answer is incorrect and unsupported."
+  },
+  "87a33dbd638a1460c1a5e5be812631fccbd2dc25": {
+    "score": 1.0,
+    "reason": "The model answer directly quotes the Evidence, which states 'Liu et al. (2024) is perhaps most similar to our work in that they perform SFT of a Llama model and evaluate on a small test set (n=10) using clinician feedback and BERTScore.'"
+  },
+  "0ffc7896878c4c8f6f57a0a7f70d47c5edeba339": {
+    "score": 0.0,
+    "reason": "Model answer cites unrelated authors and dataset not mentioned in Evidence. Evidence clearly lists different authors for the specified paper."
+  },
+  "f84f65b36b4707b272690da5b8dfe0b1be23da11": {
+    "score": 0.0,
+    "reason": "Model answer is completely unrelated to the evidence. Evidence specifies hyperparameter settings for Experiment 1, while the model answer discusses CTDE paradigms."
+  },
+  "7ea18ff497cc14c09ba0b0bef43ebb67b7cfecc6": {
+    "score": 0.0,
+    "reason": "The model answer discusses a cancer diagnosis, which is not mentioned in the provided Evidence. The Evidence only describes dataset characteristics regarding the length of physician responses and patient questions."
+  },
+  "eeb44bfa937777afcba2c872a8476edf63d3a65d": {
+    "score": 0.0,
+    "reason": "The model answer discusses OCT medical imaging findings, which is completely unrelated to the provided Evidence about p-values for sleep disorder, depression, and obesity across user groups."
+  },
+  "7f4438ae07d8f3dbac7410336f1fce2adc1b984c": {
+    "score": 0.0,
+    "reason": "The model answer discusses CoT-style prompting and model performance, which is not mentioned in the Evidence. The Evidence only describes the four proficiency configurations (p0, plow, pmid, phigh)."
+  },
+  "fa651133ad853d084c06a3b075b8cc2b2a583018": {
+    "score": 0.0,
+    "reason": "The model answer discusses unrelated topics (shallow rubrics, simulated patients, integrated systems) not mentioned in the Evidence. The Evidence is exclusively about prompting strategies and claim generation setup."
+  },
+  "cea414fad9717f66ccaa865a95775278e0f006eb": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question and is not supported by the provided Evidence. The Evidence states the proposed framework is called PRISM (Probability Reconstruction via Shapley Measures)."
+  },
+  "5b4b2ec67d3c122bb759d1c4ed2aa6633795ad52": {
+    "score": 0.0,
+    "reason": "The model answer discusses reproducibility, open/closed LLMs, and classical models, which are not mentioned in the Evidence. The Evidence only identifies Liu et al. (2024) as most similar for SFT of Llama and small test set evaluation."
+  },
+  "2b23962d4c76e0056fbd3f138fddd003d8f60478": {
+    "score": 0.0,
+    "reason": "The model answer discusses the Tanh activation function, which is completely unrelated to and unsupported by the provided Evidence about the PMC-MI dataset."
+  },
+  "2cabb56781a65a213d8f9b644ceb17250068ed70": {
+    "score": 0.0,
+    "reason": "The model answer discusses TCM learning theory, which is completely unrelated to the Evidence about BUSTR's performance on BUS-BRA metrics."
+  },
+  "19e7bcd7fd98f2738af717b1a0bb96d68a3db1da": {
+    "score": 0.0,
+    "reason": "The model answer discusses 'ubuntu tenets' which are not mentioned in the Evidence. The Evidence only contains arXiv preprint author lists."
+  },
+  "c19c020c297ae1e44e3c32f16a00766b7d7d5f3f": {
+    "score": 0.0,
+    "reason": "The model answer discusses unrelated applications of LLMs in clinical settings, while the Evidence exclusively discusses preserving institution-agnostic generalization capabilities by constraining fine-tuning with reasoning-aligned guidance"
+  },
+  "3d422f61dfc04f198f1819b97f2a63e993518b18": {
+    "score": 0.0,
+    "reason": "The model answer discusses language lists from unrelated evidence, while the question asks for the authors of a specific paper. The provided Evidence contains the correct author list for the target paper, but the model answer does not addre"
+  },
+  "d4014cb3e889c1f6481252309083c65f16256636": {
+    "score": 0.0,
+    "reason": "The model answer discusses an unrelated parameter (α=1.0) and does not list any of the four proficiency configurations (p0, plow, pmid, phigh) mentioned in the Evidence."
+  },
+  "eeceb61f8f2f8d61283a2c12a82de27402c4cf68": {
+    "score": 0.0,
+    "reason": "The model answer ('feedback and memory') is completely unrelated to and unsupported by the Evidence, which describes fine-tuning strategies (LM_ep2, LM_ep5, Instruction_ep2, Instruction_ep5) based on epochs and approach."
+  },
+  "f101a82f1e588f19cd1147f211663f75fb4ad8d0": {
+    "score": 0.0,
+    "reason": "The model answer discusses 'diagnostic attributes of parent nodes' which is completely unrelated to the question about p-values for specific conditions across user groups. The Evidence provides the requested p-values (<0.001 for each), but "
+  },
+  "43e76ba9296c5acb8518644b762ab45b9401539b": {
+    "score": 0.0,
+    "reason": "The model answer discusses endometrial cancer symptoms, which is completely unrelated to the Evidence provided about SFT of a Llama model and evaluation on a small test set."
+  },
+  "1ef1bb561f1e82cfaa6a7088317cc21b75123d40": {
+    "score": 1.0,
+    "reason": "The model answer correctly lists all authors and the conference exactly as provided in the Evidence. The year and volume details also match."
+  },
+  "20827c3ab0ac31ce87469289a9d4540cf6d0d5ff": {
+    "score": 0.0,
+    "reason": "The model answer discusses a 'reward function R_cold' and clinical scales, which is completely unrelated to the Evidence provided about prompting strategies and claim generation setup."
+  },
+  "da7f74b172de5abb071f6165149ca23e26b9919a": {
+    "score": 0.0,
+    "reason": "The model answer discusses GPT-5-mini's F1 score on a medical dataset, which is completely unrelated to the Evidence. The Evidence only discusses the proposed framework PRISM for interpretability and trustworthiness."
+  },
+  "ee50ee63c6d8cec17fbe8c05a4ce15443c1df8d8": {
+    "score": 0.0,
+    "reason": "The model answer is unrelated to the question and is not supported by the Evidence. The Evidence explicitly states the mean length is 65.8±50.4 words and 4.7±3.0 sentences."
+  },
+  "70f30eb1a7341cb044a774cb74590fc30fac6046": {
+    "score": 0.5,
+    "reason": "The model answer correctly states the epochs and names the strategies but omits the key difference in approach: LM strategies use post-tuning on plain texts, while Instruction strategies use instruct-tuning on BHCs along with their summarie"
+  },
+  "6213805b5be5e83b64c2ac99a0e75937b8b5bc75": {
+    "score": 1.0,
+    "reason": "The model answer is a direct and accurate paraphrase of the claim in the Evidence: 'the deliberate constraint of supervised fine-tuning with reasoning-aligned guidance may help preserve institution-agnostic generalization capabilities by di"
+  },
+  "93f1a50c99a3b33f4e2859ac7de4c55736f9b57b": {
+    "score": 0.5,
+    "reason": "The model answer includes unsupported hyperparameters (max_tokens, max_new_tokens, num_return_sequences, pad_token_id, eos_token_id, attention_mask, padding, truncation) not present in the Evidence. Only do_sample=False, temperature=None, t"
+  },
+  "17779d1fde4048af790264f247af13f919c8ae67": {
+    "score": 1.0,
+    "reason": "The model answer correctly and fully states that BUSTR achieves the highest precision for BI-RADS, pathology, and histology, which is explicitly supported by the Evidence."
+  },
+  "e72789fe3e49327edd46d54281d89bc6e306f737": {
+    "score": 0.0,
+    "reason": "Model answer does not list any authors, only states a general process. It fails to provide the requested list of first authors from the evidence."
+  },
+  "cd0754cb8dccc163be4d197c537b564cc31d2cd5": {
+    "score": 1.0,
+    "reason": "The model answer correctly lists all four configurations (Baseline/p0, Low-Proficiency/plow, Average-Proficiency/pmid, High-Proficiency/phigh) exactly as named and described in the Evidence."
+  },
+  "0605931c46055fe726cd5f619b4223e478b8d31f": {
+    "score": 1.0,
+    "reason": "The model answer correctly identifies the PMC-MI dataset as a large-scale training dataset for medical multi-image MLLMs and accurately states it addresses the gap of current benchmarks focusing on single-image scenarios, which inadequately"
+  },
+  "c1263a1dea323630d37769f0f2e8270bce0f66d1": {
+    "score": 0.5,
+    "reason": "The model answer correctly states the p-values (< 0.001) for each condition but incorrectly claims these p-values are given 'across opioid, recovered, and normal user groups.' The Evidence provides a single p-value for each condition compar"
+  },
+  "3fd14e203a5401f5eec1692e7a794c5fab5bf1dc": {
+    "score": 1.0,
+    "reason": "The model answer directly quotes the exact mean values (65.8±50.4 words, 4.7±3.0 sentences) provided in the Evidence."
+  },
+  "d863de98a8a479301f8d19ae4a78b24fc6b6f9de": {
+    "score": 0.5,
+    "reason": "The model answer correctly identifies the explored prompting strategies and the final setup's use of a single prompt per label. However, it omits the key detail that for two of the labels (entailed and contradicted), the final setup specifi"
+  },
+  "b2d057cec327c4f8b4ed170056a69d9d8277836c": {
+    "score": 0.0,
+    "reason": "The Evidence explicitly states the proposed framework is 'Probability Reconstruction via Shapley Measures (PRISM)'. The model answer 'Priority Alignment' is incorrect and unsupported."
+  },
+  "484c56b5d3e40d0cf6a9bc74726b4aed2e555f0e": {
+    "score": 1.0,
+    "reason": "The model answer directly quotes the Evidence, which states 'Liu et al. (2024) is perhaps most similar to our work in that they perform SFT of a Llama model and evaluate on a small test set (n=10) using clinician feedback and BERTScore.'"
+  },
+  "e94c19bf151766d9a4ff25529129cff961d843c8": {
+    "score": 0.0,
+    "reason": "The model answer cites an unrelated paper on Android app crash reproduction, which is not supported by the provided Evidence. The Evidence discusses preserving generalization capabilities in medical imaging models."
+  },
+  "d5c6c335cae4d4559688b1d91ac71104c3a0ff5f": {
+    "score": 0.0,
+    "reason": "The model answer is a mathematical equation unrelated to the evidence. The evidence states BUSTR achieves highest precision in BI-RADS, pathology, and histology for BUS-BRA."
+  },
+  "20dc620855f20a9ccaeb87ada0c216c70186000b": {
+    "score": 0.0,
+    "reason": "The model answer discusses claim sampling and judgment counts, which is completely unrelated to the question of listing first authors from the provided arXiv preprints. The Evidence contains no information supporting the model's answer."
+  },
+  "eabb38235160d378383b089be028eb09a52cc737": {
+    "score": 0.0,
+    "reason": "Model answer describes a different dataset composition not mentioned in the Evidence. The Evidence defines PMC-MI as a multi-image dataset and benchmark, which the answer does not address."
+  },
+  "9c87093cac4c30752a39c88634aa5a48e6ebce54": {
+    "score": 0.0,
+    "reason": "The model answer discusses 'Echo-CoPilot' and echocardiography, which is completely unrelated to the provided Evidence about the paper 'Superfiltering: Weak-to-strong data filtering for fast instruction-tuning'. The answer contains no infor"
+  },
+  "d2a0d54ba99e799138eb6fce456f7cf29abf8d57": {
+    "score": 0.0,
+    "reason": "The model answer lists authors and a paper title not present in the provided Evidence. The Evidence only supports the authors of the specified paper as Xinhao Chen, Chong Yang, Man Lan, Li Cai, Yang Chen, Tu Hu, Xinlin Zhuang, and Aimin Zho"
+  },
+  "e5d3d5d5e7789ccbc1501ab806ff8f409d995d83": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question about hyperparameter settings for Experiment 1. The Evidence explicitly lists the hyperparameters: do_sample=False, temperature/top_p/top_k=None, length_penalty=1.0, repetition_penalt"
+  },
+  "3e29e812d2669fc69969a56ccb746b95684610fb": {
+    "score": 0.0,
+    "reason": "The model answer discusses unrelated concepts (ST-PPO, clipping-bias) not found in the Evidence. The Evidence describes fine-tuning strategies (LM_ep2, LM_ep5, Instruction_ep2, Instruction_ep5) for Llama 3-13B on BHCs, which the model answe"
+  },
+  "58f5970231fe4f621100321df31535765c7174f4": {
+    "score": 0.0,
+    "reason": "The model answer cites a paper unrelated to the Evidence. The Evidence discusses prompting strategies for claim generation, not crash reproduction for Android apps."
+  },
+  "d10640381550fe72d0e8ff35592c7d5f031f8fed": {
+    "score": 0.0,
+    "reason": "The model answer discusses MedAbstain and clinical decision support, which are not mentioned in the Evidence. The Evidence only describes four student proficiency configurations (p0, plow, pmid, phigh)."
+  },
+  "0e0441dd3b72873958c683ee300d80b18a5a7e32": {
+    "score": 0.0,
+    "reason": "The model answer discusses an unrelated topic (Agent-as-a-Judge paradigm), while the Evidence only provides hyperparameter settings for Experiment 1."
+  },
+  "38a1b9272adda9eed23498851e57440091eb6a0d": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question and is not supported by the provided Evidence. The Evidence contains the correct authors and conference for the specified paper."
+  },
+  "38bb43de1d6ca7cbb0d18fd0298db3afea1dc103": {
+    "score": 0.0,
+    "reason": "The model answer provides a paper title, authors, journal, and year, none of which are present in or supported by the provided Evidence. The Evidence only contains information about dataset characteristics, specifically the mean length of p"
+  },
+  "841f553ea07f5ff6c81bb192167bb3de32599a2f": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question and evidence. The evidence states Liu et al. (2024) is most similar, but the answer discusses a different topic entirely."
+  },
+  "79cefca9461226f424fc13647730b576994dac2b": {
+    "score": 0.0,
+    "reason": "The model answer discusses GPT-4.1-mini and scoring metrics, which are completely unrelated to the Evidence. The Evidence provides p-values for sleep disorder, depression, and obesity across the three user groups, but the model answer fails"
+  },
+  "32ef2acf6c347bf3fcbd63684eabcbf633c5eed6": {
+    "score": 0.0,
+    "reason": "The model answer discusses few-shot prompting and a certified medical coder role, which is completely unrelated to the Evidence. The Evidence states the constraint helps preserve 'institution-agnostic generalization capabilities' by disrupt"
+  },
+  "1ea18c7e040b5986e66d5f6c41ba406eced946ab": {
+    "score": 0.0,
+    "reason": "The model answer describes a different paper and dataset unrelated to the provided Evidence about PMC-MI."
+  },
+  "b5e9ea7158f5018537e8010130a816e8c57a6dec": {
+    "score": 0.0,
+    "reason": "The model answer discusses limitations not mentioned in the Evidence, while the Evidence states BUSTR achieves highest precision for BI-RADS, pathology, and histology on BUS-BRA."
+  },
+  "97130a8f6ca4316ef7d386c98949dd518e3c09f3": {
+    "score": 0.0,
+    "reason": "The model answer discusses multi-agent reasoning challenges, which is completely unrelated to the Evidence about fine-tuning strategies for Llama 3-13B on the BHC dataset. No part of the answer is supported."
+  },
+  "0fb5a9035bdca3e0fe9afa97fd103f651349f836": {
+    "score": 0.0,
+    "reason": "The model answer discusses a challenge in planning, which is not present in the Evidence. The Evidence provides the author list for the specified paper, which the model answer does not address."
+  },
+  "7fe02632f924a8ddefc9bb90cd2ffad173b393fe": {
+    "score": 0.0,
+    "reason": "The model answer discusses performance metrics on QA tasks, which is completely unrelated to the Evidence about the four student proficiency configurations (Baseline, Low, Average, High)."
+  },
+  "28a009e6241a107df706ae7afc6236ce200c22cc": {
+    "score": 0.0,
+    "reason": "The model answer lists three unrelated conditions, while the question asks for the p-values for sleep disorder, depression, and obesity across three user groups. The provided Evidence contains the requested p-values (<0.001 for each), but t"
+  },
+  "2805ba374de8a23fd428d27f1c3fff3a4d04555d": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question, which asks for a list of first authors from specific arXiv preprints. The provided Evidence contains the necessary information, but the model answer fails to address the question at "
+  },
+  "dcd7b6b7c97b7fd0697f2de02c49a2648d5bcd07": {
+    "score": 0.0,
+    "reason": "The model answer discusses a different paper and topic not mentioned in the Evidence. The Evidence is about prompting strategies for claim generation."
+  },
+  "4e3f629a3a7f2bf826d68c08d2df8c011f561182": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question and unsupported by the Evidence. The Evidence provides the authors and conference for the specified paper."
+  },
+  "8b405626e8cfa73750d4cdb12c4cb443c90abb66": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question and is not supported by the provided Evidence."
+  },
+  "febd56f41bae5cdf9c39a7885209d33bb26aafdf": {
+    "score": 0.0,
+    "reason": "The model answer is about a paper title, while the Evidence only describes hyperparameter settings for Experiment 1. No part of the model answer is supported by the provided Evidence."
+  },
+  "c3112a42b995c24bf091494b971253dbda4d4572": {
+    "score": 0.0,
+    "reason": "The model answer cites a different paper title and different authors not present in the Evidence. The Evidence provides the correct authors for the specified paper."
+  },
+  "e6292a31c455df940343f56de055b8966357ae03": {
+    "score": 0.0,
+    "reason": "The model answer discusses a formula for harmlessness and helpfulness, which is completely unrelated to the provided Evidence about BUSTR's precision metrics on BUS-BRA."
+  },
+  "ab874361e16a9ae75fd4a8e63ec55c32a162828b": {
+    "score": 0.0,
+    "reason": "The model answer describes a general RL/learning objective unrelated to the question. The Evidence states Liu et al. (2024) is most similar for performing SFT of a Llama model and evaluating on a small test set. The model answer provides no"
+  },
+  "a85422f907a07fba10fe38e3ffdf1cce36f0a4e2": {
+    "score": 0.0,
+    "reason": "Model answer discusses an unrelated pruning importance score; Evidence defines PMC-MI as a dataset for multi-image medical MLLMs addressing the gap of single-image benchmarks."
+  },
+  "a3758beb746be373df4e11727ef17c19183f76ba": {
+    "score": 0.0,
+    "reason": "The model answer discusses 'Inference scores,' which is not mentioned in the Evidence. The Evidence only describes fine-tuning strategies (LM_ep2, LM_ep5, Instruction_ep2, Instruction_ep5) for Llama 3-13B on the BHC dataset, including their"
+  },
+  "92717ef612654a72fffcbc2616fd1071e15464e3": {
+    "score": 0.0,
+    "reason": "The model answer discusses OCT eye exams, which is completely unrelated to the Evidence provided about p-values for sleep disorder, depression, and obesity across user groups."
+  },
+  "ea9d747a86187d1ccb1793613f4ff31d0f546163": {
+    "score": 0.0,
+    "reason": "The model answer 'HateXplain' is completely unrelated to the question and the provided Evidence. The Evidence contains no mention of 'HateXplain'."
+  },
+  "7d67df2446fcb816e58fd29f6a08f769cbaaef18": {
+    "score": 0.0,
+    "reason": "The model answer discusses CoT-style prompting and model performance, which is not mentioned in the Evidence. The Evidence only describes the four proficiency configurations (Baseline, Low, Average, High)."
+  },
+  "9fe2a689b777718c03cf77966ac6a38a18433c49": {
+    "score": 0.0,
+    "reason": "The model answer discusses limitations of simulated patients and evaluation rubrics, which is completely unrelated to the Evidence provided about prompting strategies for claim generation."
+  },
+  "c2412c07e0bb14ff52aeec2c9c6c88adfe7a1dfa": {
+    "score": 0.0,
+    "reason": "The model answer discusses inter-human agreement and GPT performance, which is completely unrelated to the Evidence. The Evidence only mentions the proposed framework PRISM to overcome interpretability and trustworthiness challenges."
+  },
+  "19a20fedbb14a8813fe137abd80cb50b35704227": {
+    "score": 0.0,
+    "reason": "The model answer discusses a different paper and authors not mentioned in the Evidence. The Evidence provided is about 'Superfiltering' and other works by Ming Li et al., not the FEVER dataset."
+  },
+  "f1a7c9052536e5d5d7c33ea5985b3d169071bfb3": {
+    "score": 0.0,
+    "reason": "The model answer discusses CTDE paradigms, which is completely unrelated to the Evidence. The Evidence specifies hyperparameters for Experiment 1: do_sample=False, temperature/top_p/top_k=None, length_penalty=1.0, repetition_penalty=1.2."
+  },
+  "57a5c8987696c8ec3840492d2ba38f3b3a672b08": {
+    "score": 0.0,
+    "reason": "The model answer discusses unrelated applications of LLMs in clinical settings, while the Evidence exclusively states that the deliberate constraint helps preserve 'institution-agnostic generalization capabilities' by disrupting learned sho"
+  },
+  "79d66ed0f1c3d5139ec5fa2369e192fa96cbea43": {
+    "score": 0.0,
+    "reason": "The model answer lists languages, but the question asks for the authors of a specific paper. The Evidence provides the authors for that paper, which are Xinhao Chen et al. The model answer is completely incorrect and unsupported."
+  },
+  "fd73a421334a1270c0651a435015db465d01d089": {
+    "score": 0.0,
+    "reason": "The model answer discusses the Tanh activation function, which is completely unrelated to and unsupported by the provided Evidence about the PMC-MI dataset."
+  },
+  "35e858fefdadc8aba93795241cdf39fadbcb62f2": {
+    "score": 0.0,
+    "reason": "The model answer discusses metaphor and metonymy in clinical discourse, which is completely unrelated to the Evidence. The Evidence only reports on BUSTR's performance in specific precision metrics (BI-RADS, pathology, histology) on the BUS"
+  },
+  "5e15dc46b53fca58b1bf3cb700cbc0e79d422824": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question and evidence. It discusses unrelated medical concepts, while the evidence provides specific p-values for sleep disorder, depression, and obesity across the three user groups."
+  },
+  "b22279118c8ae03b79b3c64c70497ac0f76ba840": {
+    "score": 0.0,
+    "reason": "The model answer discusses 'R_cold' and clinical scales, which is completely unrelated to the Evidence about prompting strategies and claim generation setup."
+  },
+  "58925689fe5341a7a37fe52e87b50f819ae0b85e": {
+    "score": 0.0,
+    "reason": "The model answer discusses an operating point (α=1.0), which is not mentioned in the Evidence. The Evidence describes four student proficiency configurations (p0, plow, pmid, phigh), which the model answer does not address."
+  },
+  "d5825218ca6ad623cba810486814d625372ef109": {
+    "score": 0.0,
+    "reason": "The model answer discusses GPT-5-mini's F1 score, which is not mentioned in the Evidence. The Evidence only discusses the proposed framework PRISM."
+  },
+  "640f3690e244cd858035b22c3b3a09f2e25a0c43": {
+    "score": 0.0,
+    "reason": "The model answer discusses endometrial cancer symptoms, which is completely unrelated to the provided Evidence about SFT of a Llama model and evaluation on a small test set."
+  },
+  "f1f964deb6dea877a712fdf13390a29882ca59e4": {
+    "score": 1.0,
+    "reason": "The model answer correctly lists all eight authors from the provided Evidence for the specified paper."
+  },
+  "a7b103701c6b5a4b2f44ffa526795802c6c43e2b": {
+    "score": 1.0,
+    "reason": "The model answer correctly lists all authors and the conference exactly as provided in the Evidence. The year notation '2024a' is also directly from the source."
+  },
+  "b379e90109f4ff8f1a9cd7f0b07f7b83f5c829b8": {
+    "score": 0.0,
+    "reason": "The model answer discusses terminology ('seeker', 'responder') not mentioned in the evidence. The evidence explicitly states the mean physician response length is 65.8±50.4 words and 4.7±3.0 sentences, which the model answer completely fail"
+  },
+  "4daf9d4e2d35c082c2a28bcca9bc1af5dd2f076c": {
+    "score": 1.0,
+    "reason": "The model answer directly quotes the exact phrase 'institution-agnostic generalization capabilities' from the Evidence, which states this is what the deliberate constraint helps preserve."
+  },
+  "cb025da90469349e756de3ade9bf511e6cc2ae90": {
+    "score": 0.5,
+    "reason": "The model answer correctly states 'do sample set to False, repetition penalty = 1.2' but incorrectly adds 'temperature, top p, and top k set to None, length penalty = 1.0' which are not specified in the Evidence for Experiment 1."
+  },
+  "4612478837e9ff731a30df6653f49e413004507f": {
+    "score": 0.5,
+    "reason": "The model answer correctly identifies the four strategies and their epoch counts, but it omits the key difference in approach: LM strategies use plain texts only, while Instruction strategies use texts along with their summaries for instruc"
+  },
+  "deeb1e4d72327a9961c3adbb909fec615f4586c6": {
+    "score": 1.0,
+    "reason": "The model answer correctly and fully states that BUSTR achieves the highest precision for BI-RADS, pathology, and histology, which is exactly supported by the Evidence."
+  },
+  "2082512943b97058e6d7dc7553e2d5a1fdab12a7": {
+    "score": 0.0,
+    "reason": "Model answer lists authors not present in Evidence. Evidence lists first authors as Peng Xia, Yi Yang, Yixin Ye, Qiying Yu."
+  },
+  "d5bbb6ff2831501d7f1c3165d7a177c5c80ee68d": {
+    "score": 0.5,
+    "reason": "The answer correctly identifies the PMC-MI dataset's purpose and the gap it addresses, but it adds an unsupported detail ('237K high-quality training data') not present in the provided Evidence."
+  },
+  "08e4f92065b453a7e3bcaf5b7aedbb222b30014b": {
+    "score": 0.0,
+    "reason": "The model answer claims to search through multiple academic papers, but the provided Evidence is a single table. The answer fails to directly state the p-values (< 0.001 for all three) as shown in the Evidence."
+  },
+  "10731525ee4aa36c611697250a62b829a8e11a93": {
+    "score": 1.0,
+    "reason": "The model answer correctly lists all four configurations exactly as named and defined in the Evidence: Baseline (p0), Low-Proficiency Student (plow), Average-Proficiency Student (pmid), and High-Proficiency Student (phigh). No unsupported c"
+  },
+  "1c9bf809c5652e17712c5e377e72410fe512484c": {
+    "score": 1.0,
+    "reason": "The model answer directly and accurately quotes the mean values (65.8 words, 4.7 sentences) and their standard deviations (±50.4, ±3.0) as provided in the Evidence."
+  },
+  "86a8a62490455471bf2619f15252b9e0e59c3df7": {
+    "score": 0.5,
+    "reason": "The answer correctly identifies the prompting strategies and the final setup of using a single prompt per label. However, it omits the key finding that for entailed and contradicted claims, 1-shot prompting with medium reasoning worked best"
+  },
+  "e0f099b646d91ed7d412e7b72ae11f1ba89e4320": {
+    "score": 0.0,
+    "reason": "The Evidence explicitly names the proposed framework as 'Probability Reconstruction via Shapley Measures (PRISM)'. The model answer 'Hybrid Explainability System' is not present in the Evidence and is therefore incorrect and unsupported."
+  }
+}

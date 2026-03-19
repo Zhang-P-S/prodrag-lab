@@ -33,9 +33,10 @@ def suppress_stdout_stderr():
             yield
 
 
-def load_llm_cfg(cfg_path: str):
-    cfg = yaml.safe_load(open(cfg_path, "r", encoding="utf-8"))
-    return cfg["llm"]
+def load_cfg(cfg_path: str) -> dict:
+    """加载完整 RAG 配置（llm + retrieval + eval 等）。"""
+    with open(cfg_path, "r", encoding="utf-8") as f:
+        return yaml.safe_load(f)
 
 
 def main():
@@ -45,16 +46,44 @@ def main():
     with suppress_stdout_stderr():
         jieba.initialize()
 
-    # ---------- 1) LLM（静音加载） ----------
-    llm_cfg = load_llm_cfg("configs/rag.yaml")
+    # ---------- 1) 加载配置 ----------
+    cfg = load_cfg("configs/rag.yaml")
+
+    # ---------- 2) LLM（静音加载） ----------
+    llm_cfg = cfg.get("llm", {})
     with suppress_stdout_stderr():
         llm = build_llm(llm_cfg)
 
-    # ---------- 2) Retriever（静音加载） ----------
-    with suppress_stdout_stderr():
-        retriever = DualIndexHybridRetriever(index_root="data/index")
+    # ---------- 3) Retriever（静音加载，完全由 YAML 控制） ----------
+    paths_cfg = cfg.get("paths", {})
+    retrieval_cfg = cfg.get("retrieval", {})
+    dense_cfg = retrieval_cfg.get("dense", {})
+    rerank_cfg = cfg.get("rerank", {})
 
-    # ---------- 3) REPL ----------
+    index_root = paths_cfg.get("index_dir", "data/index")
+    embed_model_zh = dense_cfg.get("model_zh", "BAAI/bge-small-zh-v1.5")
+    embed_model_en = dense_cfg.get("model_en", "BAAI/bge-small-en-v1.5")
+    reranker_name = rerank_cfg.get("model_name", "BAAI/bge-reranker-base")
+
+    with suppress_stdout_stderr():
+        retriever = DualIndexHybridRetriever(
+            index_root=index_root,
+            embed_model_zh=embed_model_zh,
+            embed_model_en=embed_model_en,
+            reranker_name=reranker_name,
+        )
+
+    # ---------- 4) 检索/生成参数 ----------
+    eval_cfg = cfg.get("eval", {})
+    bm25_cfg = retrieval_cfg.get("bm25", {})
+
+    dual_lang = bool(eval_cfg.get("dual_lang", True))
+    dense_topk = int(dense_cfg.get("topk", 30))
+    bm25_topk = int(bm25_cfg.get("topk", 30))
+    merge_topk = int(retrieval_cfg.get("fusion", {}).get("rrf_k", 60))
+    rerank_topk = int(rerank_cfg.get("topk", 8))
+
+    # ---------- 5) REPL ----------
     while True:
         query = input("\n👤 你：").strip()
         if not query:
@@ -63,12 +92,21 @@ def main():
             print("👋 再见")
             break
 
-        # ---------- 4) 流式输出 ----------
+        # ---------- 6) 流式输出 ----------
         print("🤖 助手：", end="", flush=True)
-        for delta in run_rag_stream(query, llm, retriever):
+        for delta in run_rag_stream(
+            query,
+            llm,
+            retriever,
+            dual_lang=dual_lang,
+            dense_topk=dense_topk,
+            bm25_topk=bm25_topk,
+            merge_topk=merge_topk,
+            rerank_topk=rerank_topk,
+        ):
             print(delta, end="", flush=True)
 
-        # ---------- 5) 流式结束后：结构化证据 ----------
+        # ---------- 7) 流式结束后：结构化证据 ----------
         result = getattr(run_rag_stream, "last_result", None)
         if not result:
             continue

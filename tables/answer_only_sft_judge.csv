@@ -1,0 +1,2 @@
+Setting,N,ValidN,AnswerSim,AnswerAcc@0.65,AvgLatency(ms),JudgeN,JudgeIntendedN,JudgeFailN,JudgeParseFailN,JudgeScore,JudgeAcc@0.80
+sft,100,100,0.116591149193782,0.08,12846.853516101837,100,100,0,0,0.105,0.09

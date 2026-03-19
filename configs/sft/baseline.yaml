@@ -25,6 +25,9 @@ gen:
   top_p: 0.9
 
 retrieval:
+  dense:
+    model_zh: /root/autodl-tmp/models/bge-small-zh-v1.5
+    model_en: /root/autodl-tmp/models/bge-small-en-v1.5
   dense_topk: 15
   bm25_topk: 15
   merge_topk: 30

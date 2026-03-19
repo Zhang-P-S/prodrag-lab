@@ -1,0 +1,1196 @@
+{
+  "fee0354710ef56e300d69ef2e7e46b4233b53665": {
+    "score": 0.0,
+    "reason": "Model answer is completely unrelated to the question and provides no title.",
+    "parse_fail": false,
+    "raw_prefix": "{\"score\": 0.0, \"reason\": \"Model answer is completely unrelated to the question and provides no title.\"}"
+  },
+  "a08f4e71a2b04b604ad5d21305b7020fbe9d78de": {
+    "score": 0.0,
+    "reason": "Model answer is a citation, not a substantive answer to the question.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model answer is a citation, not a substantive answer to the question.\"\\n}"
+  },
+  "25bc480d70656b2617073e073cda9795bb00ed45": {
+    "score": 0.0,
+    "reason": "The model answer lists a completely different set of authors, none of whom match the gold answer.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer lists a completely different set of authors, none of whom match the gold answer.\"\\n}"
+  },
+  "7b7dbe13b0b248ce11a43b3fe47be20be0286762": {
+    "score": 0.0,
+    "reason": "Model answer is unrelated to the question and does not address the prompt for RAG configuration with patient queries.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model answer is unrelated to the question and does not address the prompt for RAG configuration with patient queries.\"\\n}"
+  },
+  "ebadd3e43bd2cfa813e1925b5a9399ec1cb26c71": {
+    "score": 0.0,
+    "reason": "The model answer is unrelated to the question about Figure 11 and does not address the gold answer's statement that there is insufficient information.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer is unrelated to the question about Figure 11 and does not address the gold answer's statement that there is insufficient information.\"\\n}"
+  },
+  "c88e379f4e3a48475ecf2f86090bc37366b4ecbf": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question, discussing ST-PPO vs PPO instead of fine-tuning strategies for Llama 3-13B on the BHC dataset.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer is completely unrelated to the question, discussing ST-PPO vs PPO instead of fine-tuning strategies for Llama 3-13B on the BHC dataset.\"\\n}"
+  },
+  "76b1dfe954846e4bd52822766901894cbd56766b": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question about hyperparameter settings, instead discussing drug candidate assessment.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer is completely unrelated to the question about hyperparameter settings, instead discussing drug candidate assessment.\"\\n}"
+  },
+  "558e02dc10e840cf2879969f283ba10c9db03456": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question, providing information about a different topic (Echo-CoPilot) instead of the requested authors and conference.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer is completely unrelated to the question, providing information about a different topic (Echo-CoPilot) instead of the requested authors and conference.\"\\n}"
+  },
+  "b2d96461537a65f12818a3e84bb12b6776b74abd": {
+    "score": 0.0,
+    "reason": "Model answer is completely unrelated to the gold answer, which lists specific author names.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model answer is completely unrelated to the gold answer, which lists specific author names.\"\\n}"
+  },
+  "5694de5ed24217b49817aa30e8d0ff8d7671411b": {
+    "score": 0.0,
+    "reason": "Model answer is completely unrelated to the question, providing a mathematical formula instead of the requested metrics.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model answer is completely unrelated to the question, providing a mathematical formula instead of the requested metrics.\"\\n}"
+  },
+  "de5f8c716c2c6cf35dd82c6712dbe12acc0e35f5": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question about the PMC-MI dataset and its purpose, instead providing irrelevant statistics about a different dataset.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer is completely unrelated to the question about the PMC-MI dataset and its purpose, instead providing irrelevant statistics about a different dataset.\"\\n}"
+  },
+  "3e7f42eaf5ad045f9ba93184f757965005a5f6d7": {
+    "score": 0.0,
+    "reason": "Model answer is completely unrelated to the question about what inference scores measure in RAG evaluation; it instead discusses a limitation of existing metrics.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model answer is completely unrelated to the question about what inference scores measure in RAG evaluation; it instead discusses a limitation of existing metrics.\"\\n}"
+  },
+  "a421add7a45695d7fbd91793b6db010c50dc4a76": {
+    "score": 0.0,
+    "reason": "Model answer provides unrelated content (Structure Score, Entity Score) instead of the requested p-values.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model answer provides unrelated content (Structure Score, Entity Score) instead of the requested p-values.\"\\n}"
+  },
+  "2dbed7b690bcb0c3d1f5d54f15a7cef3a8c47f0f": {
+    "score": 0.0,
+    "reason": "The model answer describes MedAbstain's purpose, not the four student proficiency configurations asked for.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer describes MedAbstain's purpose, not the four student proficiency configurations asked for.\"\\n}"
+  },
+  "c6354da99f315215c4ab3b56467dc9a1c16d6189": {
+    "score": 0.0,
+    "reason": "The model answer provides unrelated paper details and does not address the question about mean length of physician responses.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer provides unrelated paper details and does not address the question about mean length of physician responses.\"\\n}"
+  },
+  "373e2707d3ea6f404ec152b4d00648ed6a820f20": {
+    "score": 0.0,
+    "reason": "The model answer is a list of author names, which does not address the question about prompting strategies and final setup. It is completely incorrect.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer is a list of author names, which does not address the question about prompting strategies and final setup. It is completely incorrect.\"\\n}"
+  },
+  "41e9c6a52050a14ec9936fd174c4691e850dffdd": {
+    "score": 0.0,
+    "reason": "Model answer is completely unrelated to the question about funding source and award amount, and the gold answer states the information is unavailable.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model answer is completely unrelated to the question about funding source and award amount, and the gold answer states the information is unavailable.\"\\n}"
+  },
+  "2c10d733e9b94900ee9ebb7454ccc4177fd56519": {
+    "score": 0.0,
+    "reason": "Model answer is completely unrelated to the question about a benchmark dataset for explainable hate speech detection.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model answer is completely unrelated to the question about a benchmark dataset for explainable hate speech detection.\"\\n}"
+  },
+  "37fc74c0a4f3f28ae6296ba9487e032d59705717": {
+    "score": 0.0,
+    "reason": "The model answer discusses LLMs, TCM translation, and cognitive cues, but does not mention the proposed framework name (PRISM) at all.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer discusses LLMs, TCM translation, and cognitive cues, but does not mention the proposed framework name (PRISM) at all.\"\\n}"
+  },
+  "049b87377eb6f140953b963be1efdb62595ad084": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question, describing a different objective about client data attribution, while the gold answer correctly identifies a specific study (Liu et al. 2024) as most similar.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer is completely unrelated to the question, describing a different objective about client data attribution, while the gold answer correctly identifies a specific study (Liu et al. 2024) as most"
+  },
+  "f9b672750ee0e184e0f6c86d4877c731fb025a87": {
+    "score": 0.0,
+    "reason": "The model answer does not address the question at all; it instead discusses unrelated content about model replication and performance. It provides none of the requested author names or conference information.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer does not address the question at all; it instead discusses unrelated content about model replication and performance. It provides none of the requested author names or conference information"
+  },
+  "b1b9803004f8e204be21c4f026f148d4a7bc5ec5": {
+    "score": 0.0,
+    "reason": "The model answer describes a different topic (Agent-as-a-Judge paradigm) and does not mention any of the hyperparameter settings requested for Experiment 1.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer describes a different topic (Agent-as-a-Judge paradigm) and does not mention any of the hyperparameter settings requested for Experiment 1.\"\\n}"
+  },
+  "b4d8ca8c4b9880afa97848dd40f05e1ceb7217db": {
+    "score": 0.0,
+    "reason": "The model answer does not address the question about the paper's title and instead provides an unrelated definition of a metric.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer does not address the question about the paper's title and instead provides an unrelated definition of a metric.\"\\n}"
+  },
+  "4cf0757c8accb88e57d1bbe50f0fea2d121da2e4": {
+    "score": 0.0,
+    "reason": "The model answer provides a specific technical detail, but the gold answer states that the necessary information is missing from the provided context. Therefore, the model's response is incorrect as it asserts information not supported by the available data.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer provides a specific technical detail, but the gold answer states that the necessary information is missing from the provided context. Therefore, the model's response is incorrect as it asser"
+  },
+  "904648b49b90134aeafabd475518cf015e504127": {
+    "score": 0.0,
+    "reason": "The model answer describes few-shot prompting methodology, which is unrelated to the gold answer about preserving generalization capabilities.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer describes few-shot prompting methodology, which is unrelated to the gold answer about preserving generalization capabilities.\"\\n}"
+  },
+  "a93cb1dfc8347d9b2b7f8d0e98e4640e9bd574ee": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question, which asks for the authors of a specific paper.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer is completely unrelated to the question, which asks for the authors of a specific paper.\"\\n}"
+  },
+  "f6adf1609821fc587e1a9d3f09243a1ee3199ec9": {
+    "score": 0.0,
+    "reason": "Model Answer describes a tuple structure unrelated to OSS models, while Gold Answer states insufficient information to answer the question about Figure 11.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model Answer describes a tuple structure unrelated to OSS models, while Gold Answer states insufficient information to answer the question about Figure 11.\"\\n}"
+  },
+  "8556eb4a4d5eb4839c975f6c425cedec98875c68": {
+    "score": 0.0,
+    "reason": "Model answer is completely unrelated to the gold answer, discussing limitations of other methods and LLM-as-a-judge instead of the requested metrics.",
+    "parse_fail": false,
+    "raw_prefix": "{\"score\": 0.0, \"reason\": \"Model answer is completely unrelated to the gold answer, discussing limitations of other methods and LLM-as-a-judge instead of the requested metrics.\"}"
+  },
+  "9d48fe7de931760b6d322c4b906f7f2217b3a216": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question about the PMC-MI dataset, instead describing a different paper and dataset about mathematical problem solving.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer is completely unrelated to the question about the PMC-MI dataset, instead describing a different paper and dataset about mathematical problem solving.\"\\n}"
+  },
+  "ad3bf581a5e66eda23a9e479632bdcc031cd99c6": {
+    "score": 0.0,
+    "reason": "Model answer is completely unrelated to the question about fine-tuning strategies for Llama 3-13B on the BHC dataset.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model answer is completely unrelated to the question about fine-tuning strategies for Llama 3-13B on the BHC dataset.\"\\n}"
+  },
+  "1ce6347f71f53131bddcbe54ae0fea4b035a0f5c": {
+    "score": 0.0,
+    "reason": "The model answer provides an irrelevant dataset name, while the gold answer states that the information is insufficient to answer the question.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer provides an irrelevant dataset name, while the gold answer states that the information is insufficient to answer the question.\"\\n}"
+  },
+  "f0049cb37a0115fbe57f66e243fbcd03c20641bd": {
+    "score": 0.0,
+    "reason": "Model answer is completely unrelated to the question, which asks for specific p-values across three conditions and three user groups.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model answer is completely unrelated to the question, which asks for specific p-values across three conditions and three user groups.\"\\n}"
+  },
+  "95629d674975b42c84f623a9440fea062f0e58d5": {
+    "score": 0.0,
+    "reason": "Model answer is completely unrelated to the question about student proficiency configurations.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model answer is completely unrelated to the question about student proficiency configurations.\"\\n}"
+  },
+  "222929ab560191b428e9ad759ea9f1b4d67b1840": {
+    "score": 0.0,
+    "reason": "Model answer is completely unrelated to the question, which asks for a list of first authors. It instead discusses patient medical intentions.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model answer is completely unrelated to the question, which asks for a list of first authors. It instead discusses patient medical intentions.\"\\n}"
+  },
+  "c53d2bf55112701362eb898cdd69efe76e6f6c33": {
+    "score": 0.0,
+    "reason": "Model answer is completely unrelated to the question about a specific grant's funding source and amount.",
+    "parse_fail": false,
+    "raw_prefix": "{\"score\": 0.0, \"reason\": \"Model answer is completely unrelated to the question about a specific grant's funding source and amount.\"}"
+  },
+  "4453344ff4ac16bd26f1e495ef4430bd1f2f50a0": {
+    "score": 0.0,
+    "reason": "The model answer describes a multi-stage retrieve and re-rank model, which is unrelated to the gold answer's description of prompting strategies and final prompt setup.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer describes a multi-stage retrieve and re-rank model, which is unrelated to the gold answer's description of prompting strategies and final prompt setup.\"\\n}"
+  },
+  "18178cd2c93583c6b2d3742fc1156602266328f9": {
+    "score": 0.0,
+    "reason": "Model answer provides unrelated information about funding, not the requested mean length of physician responses.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model answer provides unrelated information about funding, not the requested mean length of physician responses.\"\\n}"
+  },
+  "7b3c6a52fe986c6978f417c1fc22801e377f1aec": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question, discussing incidentaloma classification criteria instead of the requested framework name.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer is completely unrelated to the question, discussing incidentaloma classification criteria instead of the requested framework name.\"\\n}"
+  },
+  "c43f9a61e03f43d35d44e59d9cda728db337d188": {
+    "score": 0.0,
+    "reason": "Model answer provides unrelated performance metrics, while gold answer states the information is missing from the provided context.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model answer provides unrelated performance metrics, while gold answer states the information is missing from the provided context.\"\\n}"
+  },
+  "0b29e0d5c479e9bdc8939a0d4da5072d2470e62e": {
+    "score": 0.0,
+    "reason": "Model answer is completely unrelated to the gold answer about hyperparameter settings.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model answer is completely unrelated to the gold answer about hyperparameter settings.\"\\n}"
+  },
+  "65f8ed1bae3031bbe1596b3221257e29484771ca": {
+    "score": 0.0,
+    "reason": "The model answer provides unrelated performance metrics and does not address the question about the authors or conference.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer provides unrelated performance metrics and does not address the question about the authors or conference.\"\\n}"
+  },
+  "a21547d452435dc7c211c94e2a3a73c8a83057c4": {
+    "score": 0.0,
+    "reason": "Model Answer does not identify a study; it merely restates the authors' methodology. Gold Answer requires a specific citation (Liu et al., 2024).",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model Answer does not identify a study; it merely restates the authors' methodology. Gold Answer requires a specific citation (Liu et al., 2024).\"\\n}"
+  },
+  "7124023d50e569e231c3c309b97c39bf225d78c8": {
+    "score": 0.0,
+    "reason": "Model Answer lists model names, which is unrelated to the Gold Answer stating insufficient data for the prompt.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model Answer lists model names, which is unrelated to the Gold Answer stating insufficient data for the prompt.\"\\n}"
+  },
+  "cacedf21ed74e1a6705c9774ede39f24941e3a6c": {
+    "score": 0.0,
+    "reason": "Model Answer does not address the question about the paper title and provides irrelevant information.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model Answer does not address the question about the paper title and provides irrelevant information.\"\\n}"
+  },
+  "c3bc8b2775f209221e0d0eaed2aa71458e99693e": {
+    "score": 0.0,
+    "reason": "The model answer describes a figure and evaluation scenarios, which is completely unrelated to the gold answer about preserving generalization capabilities.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer describes a figure and evaluation scenarios, which is completely unrelated to the gold answer about preserving generalization capabilities.\"\\n}"
+  },
+  "5e4d8e0b38065c9f1d789c91715da941f3f350ee": {
+    "score": 0.0,
+    "reason": "The model answer is a completely different paper title and topic, with no overlap in author names.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer is a completely different paper title and topic, with no overlap in author names.\"\\n}"
+  },
+  "2d6ba70ebbda639e3ba5348854fe5fd2b46888c8": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question about Figure 11 and OSS models, and the gold answer states there is insufficient information.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer is completely unrelated to the question about Figure 11 and OSS models, and the gold answer states there is insufficient information.\"\\n}"
+  },
+  "4b03b3bd337ac5c372f2031437525f8cbfa05d3d": {
+    "score": 0.0,
+    "reason": "The model answer does not address the question about BUSTR's highest precision metrics and instead discusses an unrelated weighted metric definition.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer does not address the question about BUSTR's highest precision metrics and instead discusses an unrelated weighted metric definition.\"\\n}"
+  },
+  "b4e91c7d39f6bb8ae7005ccc93b4b1fb52940d29": {
+    "score": 0.0,
+    "reason": "The model answer discusses inference scores and factual consistency, which is completely unrelated to the question about fine-tuning strategies, epochs, and approaches for Llama 3-13B on the BHC dataset.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer discusses inference scores and factual consistency, which is completely unrelated to the question about fine-tuning strategies, epochs, and approaches for Llama 3-13B on the BHC dataset.\"\\n}"
+  },
+  "d38b9b8de388dce04e8a1ec9d7a03c5592eb1d0b": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question about the PMC-MI dataset and its purpose, instead providing an unrelated mathematical expression.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer is completely unrelated to the question about the PMC-MI dataset and its purpose, instead providing an unrelated mathematical expression.\"\\n}"
+  },
+  "69b0fc41c07b9dc17c4ce01be8813bbfa1945861": {
+    "score": 0.0,
+    "reason": "Model answer lists a dataset name, not the required first authors from the 2025 arXiv preprints.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model answer lists a dataset name, not the required first authors from the 2025 arXiv preprints.\"\\n}"
+  },
+  "e033450842fc2451c87bf5b53bdf811683e2dd0e": {
+    "score": 0.0,
+    "reason": "Model answer is completely unrelated to the question about inference scores in RAG evaluation; gold answer indicates insufficient information.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model answer is completely unrelated to the question about inference scores in RAG evaluation; gold answer indicates insufficient information.\"\\n}"
+  },
+  "1298aab3f96ea27e94915a04d9c8cb16cd7211d3": {
+    "score": 0.0,
+    "reason": "The model answer discusses CoT prompting and model performance, which is completely unrelated to the question about the four student proficiency configurations.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer discusses CoT prompting and model performance, which is completely unrelated to the question about the four student proficiency configurations.\"\\n}"
+  },
+  "b8c4eb4bc0131efbb321ddc074ce9565cc00d442": {
+    "score": 0.0,
+    "reason": "The model answer discusses OCT medical imaging findings, which is completely unrelated to the question about p-values for sleep disorder, depression, and obesity across user groups.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer discusses OCT medical imaging findings, which is completely unrelated to the question about p-values for sleep disorder, depression, and obesity across user groups.\"\\n}"
+  },
+  "283126a5205a1beedeb594b2100060c3d493c49e": {
+    "score": 0.0,
+    "reason": "The model answer describes unrelated prior work issues, while the gold answer specifies prompting strategies and the final setup for generating claims.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer describes unrelated prior work issues, while the gold answer specifies prompting strategies and the final setup for generating claims.\"\\n}"
+  },
+  "75876af41e2539e0aad8eff249d2d3f64765628d": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question and provides no relevant information.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer is completely unrelated to the question and provides no relevant information.\"\\n}"
+  },
+  "834c8bdfd7f64f85c0ef066a654f450616b7beff": {
+    "score": 0.0,
+    "reason": "The model answer provides a specific medical fact unrelated to the question about mean length of physician responses, failing to address the requested statistical information.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer provides a specific medical fact unrelated to the question about mean length of physician responses, failing to address the requested statistical information.\"\\n}"
+  },
+  "a5d337bdda4a26955c1265b235888360519ad1a7": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question and the gold answer, which states the information is insufficient.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer is completely unrelated to the question and the gold answer, which states the information is insufficient.\"\\n}"
+  },
+  "3078f3386828564d5b2297c1d0254c86ac0e0aee": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question, which asks for specific funding details. The gold answer correctly states the information is unavailable.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer is completely unrelated to the question, which asks for specific funding details. The gold answer correctly states the information is unavailable.\"\\n}"
+  },
+  "683ec75562362f6b093724b35e0eba6ca37b3ad9": {
+    "score": 0.0,
+    "reason": "Model answer is completely unrelated to the question about hyperparameter settings.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model answer is completely unrelated to the question about hyperparameter settings.\"\\n}"
+  },
+  "84be47650dfdd13a5d226fbbc342bec30af00655": {
+    "score": 0.0,
+    "reason": "The model answer lists authors and a dataset unrelated to the paper in question, providing no correct information.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer lists authors and a dataset unrelated to the paper in question, providing no correct information.\"\\n}"
+  },
+  "fe93d169877d0464dbd841352ad9493cd3ae6609": {
+    "score": 0.0,
+    "reason": "The model answer does not identify a specific study, instead providing a general statement about the corpus and evaluation. It fails to address the question, which asks for the most similar study.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer does not identify a specific study, instead providing a general statement about the corpus and evaluation. It fails to address the question, which asks for the most similar study.\"\\n}"
+  },
+  "313d26b4d75c54d7b3b72874cbb3ed85634e2343": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question, which asks for a specific RAG configuration prompt. The gold answer states there is insufficient information to answer.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer is completely unrelated to the question, which asks for a specific RAG configuration prompt. The gold answer states there is insufficient information to answer.\"\\n}"
+  },
+  "5f27582c0e6c6440738d906d49f54a64c35b9fab": {
+    "score": 0.0,
+    "reason": "The model answer discusses unrelated LLM medical applications, while the gold answer is about preserving generalization capabilities during fine-tuning.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer discusses unrelated LLM medical applications, while the gold answer is about preserving generalization capabilities during fine-tuning.\"\\n}"
+  },
+  "b7a65fde2f7c067d6358ee24ec712c022b50bc24": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question, which asks for a paper title. It instead discusses a figure from an unrelated topic.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer is completely unrelated to the question, which asks for a paper title. It instead discusses a figure from an unrelated topic.\"\\n}"
+  },
+  "a1f271cacb8ad87cc45d98611f8960095b78cd0e": {
+    "score": 0.0,
+    "reason": "The model answer lists languages from a different paper, not the authors of the requested paper.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer lists languages from a different paper, not the authors of the requested paper.\"\\n}"
+  },
+  "519f8651435996f51b0b0d112b0f3ac610699e99": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question about the PMC-MI dataset.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer is completely unrelated to the question about the PMC-MI dataset.\"\\n}"
+  },
+  "c47c97de1e7979590aa92b6c12aa295486808303": {
+    "score": 0.0,
+    "reason": "The model answer provides detailed medical information unrelated to the question about Figure 11 and OSS models, while the gold answer correctly states that there is insufficient information to answer the question. The model answer is therefore incorrect.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer provides detailed medical information unrelated to the question about Figure 11 and OSS models, while the gold answer correctly states that there is insufficient information to answer the qu"
+  },
+  "d27d8ae6440e9928711de6798f408338e684e738": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question, which asks for specific metrics from the BUS-BRA results. It provides a generic statement about TCM learning instead.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer is completely unrelated to the question, which asks for specific metrics from the BUS-BRA results. It provides a generic statement about TCM learning instead.\"\\n}"
+  },
+  "0618c338a3311b98d8fa3dff22557693690db1fa": {
+    "score": 0.0,
+    "reason": "The model answer is completely incorrect and unrelated to the gold answer, which specifies four fine-tuning strategies (LM_ep2, LM_ep5, Instruction_ep2, Instruction_ep5) with details on epochs and approach.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer is completely incorrect and unrelated to the gold answer, which specifies four fine-tuning strategies (LM_ep2, LM_ep5, Instruction_ep2, Instruction_ep5) with details on epochs and approach.\""
+  },
+  "45be8dad31003d86aff270faed76ee92e37a0bdf": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question about inference scores in RAG evaluation.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer is completely unrelated to the question about inference scores in RAG evaluation.\"\\n}"
+  },
+  "b5f6f9c9bca2bc62e92a62f5f5f6ab34041d04e8": {
+    "score": 0.0,
+    "reason": "The model answer does not address the question about student proficiency configurations; it instead discusses an unrelated experimental parameter.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer does not address the question about student proficiency configurations; it instead discusses an unrelated experimental parameter.\"\\n}"
+  },
+  "c4a11c8a0e6617b3c0792df314bbeeb177a57f4a": {
+    "score": 0.0,
+    "reason": "The model answer does not provide the requested p-values at all; it is completely off-topic.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer does not provide the requested p-values at all; it is completely off-topic.\"\\n}"
+  },
+  "1536ff56876000df79cca9c7b3ad4803972f9115": {
+    "score": 0.0,
+    "reason": "Model answer is completely unrelated to the gold answer, which lists specific author names.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model answer is completely unrelated to the gold answer, which lists specific author names.\"\\n}"
+  },
+  "c8c0bb5a6fbac9ae8bf74acf9f897ceca95d57d8": {
+    "score": 0.0,
+    "reason": "The model answer describes a reward function, which is unrelated to the gold answer's content about prompting strategies and final setup for generating claims.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer describes a reward function, which is unrelated to the gold answer's content about prompting strategies and final setup for generating claims.\"\\n}"
+  },
+  "44f6d5d3d0c34b53c5e4f88e6a3bdcf7d9e2a246": {
+    "score": 0.0,
+    "reason": "The model answer provides an unrelated performance metric for a different task, while the gold answer specifies the framework name.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer provides an unrelated performance metric for a different task, while the gold answer specifies the framework name.\"\\n}"
+  },
+  "38ddfd147da2fca2b4a29ac6cb8aaffd8dd81a5a": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question, which asks for a numerical mean length in words and sentences.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer is completely unrelated to the question, which asks for a numerical mean length in words and sentences.\"\\n}"
+  },
+  "c918f149aa4cdb1c9e252c2c99abc7d121cc9328": {
+    "score": 0.0,
+    "reason": "Model answer is completely unrelated to the question about a benchmark dataset for explainable hate speech detection.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model answer is completely unrelated to the question about a benchmark dataset for explainable hate speech detection.\"\\n}"
+  },
+  "fd6baab4acfc3b9571a09a3970fa982644066163": {
+    "score": 0.0,
+    "reason": "Model answer is completely unrelated to the question about funding source and award amount, and does not address the gold answer's statement that information is insufficient.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model answer is completely unrelated to the question about funding source and award amount, and does not address the gold answer's statement that information is insufficient.\"\\n}"
+  },
+  "b956283a8dbace3144ce20b23573746f884ea403": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question, which asks about a similar study in machine learning, not medical symptoms.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer is completely unrelated to the question, which asks about a similar study in machine learning, not medical symptoms.\"\\n}"
+  },
+  "bd51a90d3c33eef42e86bcee26073115f950bf6c": {
+    "score": 0.0,
+    "reason": "Model answer provides a specific prompt structure not supported by the gold answer, which states insufficient data to answer.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model answer provides a specific prompt structure not supported by the gold answer, which states insufficient data to answer.\"\\n}"
+  },
+  "ccb4e6740a95839bd06abe8a09fed40900711e47": {
+    "score": 0.5,
+    "reason": "The author list is fully correct, but the conference citation is incomplete. The model answer omits 'Proceedings of the' and adds an erroneous '2024a' suffix, while the gold answer specifies the full publication venue.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.5,\\n  \"reason\": \"The author list is fully correct, but the conference citation is incomplete. The model answer omits 'Proceedings of the' and adds an erroneous '2024a' suffix, while the gold answer specifies the full publica"
+  },
+  "1ee6bf973cf3016ffe1c1530551b0b016a682a9d": {
+    "score": 0.5,
+    "reason": "Model Answer includes all correct hyperparameters from Gold Answer but adds extra unspecified settings (max_tokens, max_new_tokens, etc.), which are not part of the required answer.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.5,\\n  \"reason\": \"Model Answer includes all correct hyperparameters from Gold Answer but adds extra unspecified settings (max_tokens, max_new_tokens, etc.), which are not part of the required answer.\"\\n}"
+  },
+  "97356fdaca6575eb2d03cfb9b666120984d3af79": {
+    "score": 1.0,
+    "reason": "Model answer exactly matches the gold answer, listing all authors in the correct order.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 1.0,\\n  \"reason\": \"Model answer exactly matches the gold answer, listing all authors in the correct order.\"\\n}"
+  },
+  "545cfe1d46577ecef4c3d88dd3d4172c6608c1bf": {
+    "score": 0.0,
+    "reason": "The model answer provides a specific title, but the gold answer states there is insufficient information to confirm any title. Therefore, the model's claim is unverified and incorrect.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer provides a specific title, but the gold answer states there is insufficient information to confirm any title. Therefore, the model's claim is unverified and incorrect.\"\\n}"
+  },
+  "fb689f315c01b97dd7f297e37fbbf1b180b570eb": {
+    "score": 1.0,
+    "reason": "The model answer fully captures the key point from the gold answer ('preserve institution-agnostic generalization capabilities') and correctly adds explanatory detail about disrupting learned shortcuts, which is a valid elaboration.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 1.0,\\n  \"reason\": \"The model answer fully captures the key point from the gold answer ('preserve institution-agnostic generalization capabilities') and correctly adds explanatory detail about disrupting learned shortcuts, whic"
+  },
+  "d1a9730513dac334588b4658dc902a46869a978a": {
+    "score": 0.0,
+    "reason": "The model answer provides a specific interpretation of Figure 11, but the gold answer states that no relevant information was retrieved to support any answer. Therefore, the model's claim is unsupported and incorrect.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer provides a specific interpretation of Figure 11, but the gold answer states that no relevant information was retrieved to support any answer. Therefore, the model's claim is unsupported and "
+  },
+  "f97c3ac674679a04b3ded9e9842e70137af85039": {
+    "score": 1.0,
+    "reason": "The model answer exactly matches the gold answer, listing all three metrics correctly.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 1.0,\\n  \"reason\": \"The model answer exactly matches the gold answer, listing all three metrics correctly.\"\\n}"
+  },
+  "b3ce67c0b8b95d34694547012f5aec9286553b70": {
+    "score": 0.5,
+    "reason": "Model answer correctly states the epochs and general approach names, but omits key details: the dataset size (10,000 BHCs) and the specific data used (plain texts for LM, texts with summaries for Instruction).",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.5,\\n  \"reason\": \"Model answer correctly states the epochs and general approach names, but omits key details: the dataset size (10,000 BHCs) and the specific data used (plain texts for LM, texts with summaries for Instruction"
+  },
+  "feaa1be48dad9d64fd2e4874f71a3e08e55e92e7": {
+    "score": 0.0,
+    "reason": "Model Answer does not list any authors; it only describes the task.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model Answer does not list any authors; it only describes the task.\"\\n}"
+  },
+  "08904b0937f7e0be59f67a357975456abca2117c": {
+    "score": 0.0,
+    "reason": "Gold answer states insufficient information to answer; model answer provides a specific definition not supported by the gold reference.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Gold answer states insufficient information to answer; model answer provides a specific definition not supported by the gold reference.\"\\n}"
+  },
+  "a441482e513d124b732778cbd8e5927d468d4456": {
+    "score": 1.0,
+    "reason": "The model answer is a verbatim match of the gold answer, capturing all key information about the dataset's purpose and the specific gap it addresses.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 1.0,\\n  \"reason\": \"The model answer is a verbatim match of the gold answer, capturing all key information about the dataset's purpose and the specific gap it addresses.\"\\n}"
+  },
+  "f26332ced104fe0262047879a45af0695fcc1c45": {
+    "score": 1.0,
+    "reason": "Model answer fully matches gold answer in meaning and precision, stating all p-values are < 0.001 for the specified conditions and groups.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 1.0,\\n  \"reason\": \"Model answer fully matches gold answer in meaning and precision, stating all p-values are < 0.001 for the specified conditions and groups.\"\\n}"
+  },
+  "dcafa5c496b517772bf484d994fdd37048025674": {
+    "score": 1.0,
+    "reason": "The Model Answer is a fully correct paraphrase of the Gold Answer, containing all key information about the prompting strategies and final setup.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 1.0,\\n  \"reason\": \"The Model Answer is a fully correct paraphrase of the Gold Answer, containing all key information about the prompting strategies and final setup.\"\\n}"
+  },
+  "62456c6c70e5563fe4c774e6832403fcc488c178": {
+    "score": 1.0,
+    "reason": "The model answer exactly matches the gold answer in both numeric values and formatting.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 1.0,\\n  \"reason\": \"The model answer exactly matches the gold answer in both numeric values and formatting.\"\\n}"
+  },
+  "405fcc81132de52d223a6b9f6c81615dca93f1b2": {
+    "score": 1.0,
+    "reason": "The model answer contains all four correct configurations with identical names and abbreviations as the gold answer. The omission of the parenthetical 'No Proficiency' in 'Baseline (p0)' is a minor paraphrase and does not change the meaning.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 1.0,\\n  \"reason\": \"The model answer contains all four correct configurations with identical names and abbreviations as the gold answer. The omission of the parenthetical 'No Proficiency' in 'Baseline (p0)' is a minor paraphras"
+  },
+  "0e7f2f60a72895f696faa42ca14cabeb3cadcd70": {
+    "score": 0.0,
+    "reason": "Gold answer states insufficient information to answer, making any specific answer incorrect.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Gold answer states insufficient information to answer, making any specific answer incorrect.\"\\n}"
+  },
+  "c5bcf109c47f8a0e59741543c62ff1b433f93678": {
+    "score": 0.0,
+    "reason": "Model answer provides specific details not supported by the gold answer, which states the information is insufficient.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model answer provides specific details not supported by the gold answer, which states the information is insufficient.\"\\n}"
+  },
+  "fa2accd152c1366a731b74e0c0fa615fa3a70fa1": {
+    "score": 0.0,
+    "reason": "The model answer 'Priority Alignment' is completely different from the gold answer 'Probability Reconstruction via Shapley Measures (PRISM)' and is incorrect.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer 'Priority Alignment' is completely different from the gold answer 'Probability Reconstruction via Shapley Measures (PRISM)' and is incorrect.\"\\n}"
+  },
+  "fdd266c412f82ace661201a9b04b4fb6b25fc1b3": {
+    "score": 1.0,
+    "reason": "Model answer correctly identifies Liu et al. (2024) as the most similar study and includes the key similarity of performing SFT on a Llama model and evaluating on a small test set. Additional details in the model answer are accurate elaborations, not required ",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 1.0,\\n  \"reason\": \"Model answer correctly identifies Liu et al. (2024) as the most similar study and includes the key similarity of performing SFT on a Llama model and evaluating on a small test set. Additional details in the "
+  },
+  "afdb2a8898bd9bb07cdf89f9738c66853a913dda": {
+    "score": 0.0,
+    "reason": "Model answer is completely unrelated to the question and provides irrelevant citation details instead of addressing the preservation of generalization capabilities.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model answer is completely unrelated to the question and provides irrelevant citation details instead of addressing the preservation of generalization capabilities.\"\\n}"
+  },
+  "bbb5862b8be36368c6f1bdc71763800f245582f3": {
+    "score": 0.0,
+    "reason": "Model answer is completely unrelated to the question and provides irrelevant information, while the gold answer correctly states the data is insufficient.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model answer is completely unrelated to the question and provides irrelevant information, while the gold answer correctly states the data is insufficient.\"\\n}"
+  },
+  "f3a50d3d9194c5e3bc2b62a1b1190a8f1b7b7b83": {
+    "score": 0.0,
+    "reason": "Model answer is completely unrelated to the question about authors of the specified paper.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model answer is completely unrelated to the question about authors of the specified paper.\"\\n}"
+  },
+  "ad35022ece3d728e70d2c02102f53fe59714c758": {
+    "score": 0.0,
+    "reason": "The model answer describes a completely different paper (Echo-CoPilot) and provides no information about the authors or conference for the requested paper.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer describes a completely different paper (Echo-CoPilot) and provides no information about the authors or conference for the requested paper.\"\\n}"
+  },
+  "701cc5466e5a40c3bc157622b060de5db9b27230": {
+    "score": 0.0,
+    "reason": "The model answer discusses multi-agent systems in general, which is unrelated to the specific question about Figure 11 and OSS models. The gold answer states there is insufficient information to answer.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer discusses multi-agent systems in general, which is unrelated to the specific question about Figure 11 and OSS models. The gold answer states there is insufficient information to answer.\"\\n}"
+  },
+  "870944c5b258ba7d088334df1a6dab7168c4b3ac": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the gold answer, providing no relevant hyperparameter information.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer is completely unrelated to the gold answer, providing no relevant hyperparameter information.\"\\n}"
+  },
+  "917866839c070df1a1843482cfdc91a197c54c7f": {
+    "score": 0.0,
+    "reason": "The model answer does not address the question about the paper's title and instead provides irrelevant information about a RAG configuration prompt.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer does not address the question about the paper's title and instead provides irrelevant information about a RAG configuration prompt.\"\\n}"
+  },
+  "0fda42daf2e4b36e4bb6494ad171431b5f208af9": {
+    "score": 0.0,
+    "reason": "Model Answer discusses a different method (ST-PPO) unrelated to the fine-tuning strategies for Llama 3-13B on BHC dataset; it does not address LM_ep2, LM_ep5, Instruction_ep2, or Instruction_ep5.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model Answer discusses a different method (ST-PPO) unrelated to the fine-tuning strategies for Llama 3-13B on BHC dataset; it does not address LM_ep2, LM_ep5, Instruction_ep2, or Instruction_ep5.\"\\n}"
+  },
+  "19d312241b5f729af84c5642ca4e4c414d23a6a8": {
+    "score": 0.0,
+    "reason": "模型回答与问题无关，未列出任何作者姓名，完全错误。",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"模型回答与问题无关，未列出任何作者姓名，完全错误。\"\\n}"
+  },
+  "737f5c4200370a156a02c9f31c7956c776674b2a": {
+    "score": 0.0,
+    "reason": "The model answer does not address the question about inference scores in RAG evaluation; it discusses limitations of hallucination metrics in medical QA instead.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer does not address the question about inference scores in RAG evaluation; it discusses limitations of hallucination metrics in medical QA instead.\"\\n}"
+  },
+  "435fda6903ff3ca1896267fefb991928793aaf08": {
+    "score": 0.0,
+    "reason": "The model answer describes MedAbstain's purpose, not the four student proficiency configurations.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer describes MedAbstain's purpose, not the four student proficiency configurations.\"\\n}"
+  },
+  "9fd3d38ba1d8ce242c77c1319d647616a5cdb9a2": {
+    "score": 0.0,
+    "reason": "Model answer is completely unrelated to the question about prompting strategies and final setup; it instead provides an unrelated citation.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model answer is completely unrelated to the question about prompting strategies and final setup; it instead provides an unrelated citation.\"\\n}"
+  },
+  "e188c8e79edea4513ff3bc0f83fb7789d0464f12": {
+    "score": 0.0,
+    "reason": "Model answer describes an evaluation method for text generation, while gold answer provides specific p-values from a statistical analysis. The content is completely unrelated.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model answer describes an evaluation method for text generation, while gold answer provides specific p-values from a statistical analysis. The content is completely unrelated.\"\\n}"
+  },
+  "1e7572c243c10feac9c4543259342453926189e7": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question, discussing a technical definition instead of addressing the requested metrics.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer is completely unrelated to the question, discussing a technical definition instead of addressing the requested metrics.\"\\n}"
+  },
+  "f5d3ce940c520ec5274f8540c2adfa4cce6a1949": {
+    "score": 0.0,
+    "reason": "The model answer describes a different dataset composition and does not mention PMC-MI, its purpose, or the multi-image gap it addresses.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer describes a different dataset composition and does not mention PMC-MI, its purpose, or the multi-image gap it addresses.\"\\n}"
+  },
+  "de3944b9808f42be287a9c2072847b0b95f751c8": {
+    "score": 0.0,
+    "reason": "Model answer does not address the question about mean length of physician responses and instead discusses an unrelated paper.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model answer does not address the question about mean length of physician responses and instead discusses an unrelated paper.\"\\n}"
+  },
+  "9a7873482a0dc1be15298b2e93ab74d13eea1c13": {
+    "score": 0.0,
+    "reason": "Model answer is completely unrelated to the question asked.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model answer is completely unrelated to the question asked.\"\\n}"
+  },
+  "b07f8785fa259d08ae1b502bf9577cd31fad1e60": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question about a benchmark dataset for explainable hate speech detection.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer is completely unrelated to the question about a benchmark dataset for explainable hate speech detection.\"\\n}"
+  },
+  "77858faa2f1cc7eb391fe37a58ad0ef6835d00d4": {
+    "score": 0.0,
+    "reason": "The model answer discusses LLMs and TCM translation, which is unrelated to the gold answer about the PRISM framework for interpretability and trustworthiness.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer discusses LLMs and TCM translation, which is unrelated to the gold answer about the PRISM framework for interpretability and trustworthiness.\"\\n}"
+  },
+  "5a78073a64bb69683f44ccde3aa2ed942864942f": {
+    "score": 0.0,
+    "reason": "The model answer provides an unrelated formula and does not address the question about the paper's title.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer provides an unrelated formula and does not address the question about the paper's title.\"\\n}"
+  },
+  "823993c231b4bb3bc175bde0a62d2725ca82009f": {
+    "score": 0.0,
+    "reason": "The model answer does not address the question at all; it discusses a completely different topic about model replication and performance, while the question asks for the authors and conference of a specific paper.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer does not address the question at all; it discusses a completely different topic about model replication and performance, while the question asks for the authors and conference of a specific "
+  },
+  "e642485ba686548c8dbc31f27c45287afc4e0a7f": {
+    "score": 0.0,
+    "reason": "The model answer describes a different topic (Agent-as-a-Judge paradigm) and does not provide any of the requested hyperparameter settings for Experiment 1.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer describes a different topic (Agent-as-a-Judge paradigm) and does not provide any of the requested hyperparameter settings for Experiment 1.\"\\n}"
+  },
+  "03ef81285c085a95c37af859ccf8e4c82b84ea71": {
+    "score": 0.0,
+    "reason": "The model answer describes a different study (ProToken) focused on data attribution, not one similar to the authors' work in performing SFT of a Llama model and evaluating on a small test set.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer describes a different study (ProToken) focused on data attribution, not one similar to the authors' work in performing SFT of a Llama model and evaluating on a small test set.\"\\n}"
+  },
+  "1ba5383df2ede9e45d64027c946d6b7fa0c6386d": {
+    "score": 0.0,
+    "reason": "The model answer describes a different method and role entirely, and does not address the generalization capability mentioned in the gold answer.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer describes a different method and role entirely, and does not address the generalization capability mentioned in the gold answer.\"\\n}"
+  },
+  "61466488f2a8f4409b0845049082b9b5603a8474": {
+    "score": 0.0,
+    "reason": "The model answer provides a technical description of a retrieval method, but it does not answer the specific question about the complete prompt for RAG configuration with patient queries. The gold answer correctly states that the provided information is insuff",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer provides a technical description of a retrieval method, but it does not answer the specific question about the complete prompt for RAG configuration with patient queries. The gold answer cor"
+  },
+  "3264c7d41233fb2f79cf2bb85694995c84c896ac": {
+    "score": 0.0,
+    "reason": "The model answer does not provide any author names, instead discussing an unrelated topic in agentic reasoning.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer does not provide any author names, instead discussing an unrelated topic in agentic reasoning.\"\\n}"
+  },
+  "2a652646883525cd5ed823a3a926cce969f0bbc5": {
+    "score": 0.0,
+    "reason": "The model answer discusses multi-agent systems, which is completely unrelated to the question about fine-tuning strategies for Llama 3-13B on the BHC dataset.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer discusses multi-agent systems, which is completely unrelated to the question about fine-tuning strategies for Llama 3-13B on the BHC dataset.\"\\n}"
+  },
+  "e7dce39ad993f5bbf68b1a9381f5c8e416cff22a": {
+    "score": 0.0,
+    "reason": "The model answer describes a tuple structure from a Teacher model, which is unrelated to the question about what Figure 11 shows regarding OSS models. It does not address the question and is factually incorrect in this context.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer describes a tuple structure from a Teacher model, which is unrelated to the question about what Figure 11 shows regarding OSS models. It does not address the question and is factually incorr"
+  },
+  "18c6da46fd8ebdb99c816a9224d94dc59cf4f0fd": {
+    "score": 0.0,
+    "reason": "The model answer is completely incorrect; it provides unrelated authors and a citation about AI alignment, while the gold answer describes a specific medical imaging dataset and its purpose.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer is completely incorrect; it provides unrelated authors and a citation about AI alignment, while the gold answer describes a specific medical imaging dataset and its purpose.\"\\n}"
+  },
+  "20bd10bd979d6ddcba65619004740b7005b988a4": {
+    "score": 0.0,
+    "reason": "Model answer does not address the question about metrics where BUSTR achieves highest precision; it instead discusses limitations of evaluation methods.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model answer does not address the question about metrics where BUSTR achieves highest precision; it instead discusses limitations of evaluation methods.\"\\n}"
+  },
+  "7929b808cac51fae7f2f774c755dd1e783983ad0": {
+    "score": 0.0,
+    "reason": "Model answer is completely unrelated to the question, which asks for a list of first authors from specific arXiv preprints.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model answer is completely unrelated to the question, which asks for a list of first authors from specific arXiv preprints.\"\\n}"
+  },
+  "9c71e8f060c657a697868bd3b92b8c7390103b30": {
+    "score": 0.0,
+    "reason": "The model answer 'ViHERMES' is unrelated to the question about what inference scores measure in RAG evaluation, while the gold answer indicates insufficient information was retrieved.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer 'ViHERMES' is unrelated to the question about what inference scores measure in RAG evaluation, while the gold answer indicates insufficient information was retrieved.\"\\n}"
+  },
+  "491fb594bff4373af90719363229c81b8b0712a0": {
+    "score": 0.0,
+    "reason": "The model answer provides unrelated performance metrics and does not mention any of the four student proficiency configurations.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer provides unrelated performance metrics and does not mention any of the four student proficiency configurations.\"\\n}"
+  },
+  "71edd40d1e4dad05aaa81d55d207f3ce6990ff88": {
+    "score": 0.0,
+    "reason": "The model answer provides unrelated paper citations and does not address the prompting strategies or final setup described in the gold answer.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer provides unrelated paper citations and does not address the prompting strategies or final setup described in the gold answer.\"\\n}"
+  },
+  "f4c91490e2b83ff2fad25b958151f5fa55afa8b8": {
+    "score": 0.0,
+    "reason": "Model Answer is completely unrelated to the question about funding source and award amount.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model Answer is completely unrelated to the question about funding source and award amount.\"\\n}"
+  },
+  "3594027a99dbb8b7101db13f1d80995903509d36": {
+    "score": 0.0,
+    "reason": "The model answer discusses different diseases and a demographic group, which is completely unrelated to the gold answer's requested p-values for sleep disorder, depression, and obesity across specific user groups.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer discusses different diseases and a demographic group, which is completely unrelated to the gold answer's requested p-values for sleep disorder, depression, and obesity across specific user g"
+  },
+  "7305c56624253de9c7617baabfaafd7b20d531cf": {
+    "score": 0.0,
+    "reason": "The model answer is in Chinese and discusses medical classification criteria, which is completely unrelated to the question about a proposed framework for interpretability and trustworthiness.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer is in Chinese and discusses medical classification criteria, which is completely unrelated to the question about a proposed framework for interpretability and trustworthiness.\"\\n}"
+  },
+  "2da6e62b2ff3c3f075f334566130d0d415689301": {
+    "score": 0.0,
+    "reason": "Model answer states insufficient data, but gold answer provides specific numerical statistics.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model answer states insufficient data, but gold answer provides specific numerical statistics.\"\\n}"
+  },
+  "edd9782c7ad2d186b4bad1e89e80f749dc9c22e0": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question and provides no relevant information.",
+    "parse_fail": false,
+    "raw_prefix": "{\"score\": 0.0, \"reason\": \"The model answer is completely unrelated to the question and provides no relevant information.\"}"
+  },
+  "126608f5edf4dc373fe25ed73092e806bd92f183": {
+    "score": 0.0,
+    "reason": "The model answer describes the P2S framework and its reward mechanism, but does not identify a similar study as requested. It fails to mention Liu et al. (2024) or any other study.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer describes the P2S framework and its reward mechanism, but does not identify a similar study as requested. It fails to mention Liu et al. (2024) or any other study.\"\\n}"
+  },
+  "7db3d3dc726407190e22c7c4837a0c7014e8406e": {
+    "score": 0.0,
+    "reason": "The model answer does not address the question about authors and conference; it is entirely unrelated.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer does not address the question about authors and conference; it is entirely unrelated.\"\\n}"
+  },
+  "a734e690e89f489fceab87531cd03a61bfeba1b4": {
+    "score": 0.0,
+    "reason": "Model answer is unrelated to the question and does not address the requested title.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model answer is unrelated to the question and does not address the requested title.\"\\n}"
+  },
+  "8a1eccee10c81c09d7eb5acd6f75a1a8c3e1e375": {
+    "score": 0.0,
+    "reason": "The model answer describes a figure's content and does not address the question about preserving generalization capabilities.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer describes a figure's content and does not address the question about preserving generalization capabilities.\"\\n}"
+  },
+  "96a4b38329f2a384c69c351e2dc68bca4998fc37": {
+    "score": 0.0,
+    "reason": "Model answer states insufficient information, but gold answer provides specific hyperparameter settings.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model answer states insufficient information, but gold answer provides specific hyperparameter settings.\"\\n}"
+  },
+  "f46eef2afc9e29829ee54da3294304e1db938074": {
+    "score": 0.0,
+    "reason": "Model Answer provides unrelated information about model evaluation, while Gold Answer states insufficient data to answer the question.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model Answer provides unrelated information about model evaluation, while Gold Answer states insufficient data to answer the question.\"\\n}"
+  },
+  "f12c20b33317b8a9071f1ef6730f0027767fb6df": {
+    "score": 0.0,
+    "reason": "The model answer lists completely different authors and unrelated paper titles, with no overlap with the gold answer.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer lists completely different authors and unrelated paper titles, with no overlap with the gold answer.\"\\n}"
+  },
+  "8a11c403334902d33c3f0915eddc0203242f0a97": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question about fine-tuning strategies for Llama 3-13B on the BHC dataset.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer is completely unrelated to the question about fine-tuning strategies for Llama 3-13B on the BHC dataset.\"\\n}"
+  },
+  "9bbdcc60b2a9bf142ba759aa44f40d40f54b75b8": {
+    "score": 0.0,
+    "reason": "The model answer discusses a different topic (EHRs, LLMs, multilingual context) and does not address Figure 11 or OSS models at all, which is completely incorrect given the gold answer states the information is missing.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer discusses a different topic (EHRs, LLMs, multilingual context) and does not address Figure 11 or OSS models at all, which is completely incorrect given the gold answer states the information"
+  },
+  "ecb864c495a62c07bec38be1c21dbc285e3ca3fa": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question, discussing a different metric and formula instead of listing the metrics where BUSTR achieves highest precision.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer is completely unrelated to the question, discussing a different metric and formula instead of listing the metrics where BUSTR achieves highest precision.\"\\n}"
+  },
+  "ef5e433476466d05c33027563bfe85f9dd1bc61c": {
+    "score": 0.0,
+    "reason": "Model answer provides unrelated workflow success rates, while gold answer states insufficient information to answer the question.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model answer provides unrelated workflow success rates, while gold answer states insufficient information to answer the question.\"\\n}"
+  },
+  "6c916dbf160416c557fdd43b1266eafdcae4c39a": {
+    "score": 0.0,
+    "reason": "The model answer describes a pruning method for neural networks, which is completely unrelated to the question about the PMC-MI dataset and its purpose.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer describes a pruning method for neural networks, which is completely unrelated to the question about the PMC-MI dataset and its purpose.\"\\n}"
+  },
+  "c0ad51cc1b93c61799e8eafc2b7900b9d1d41b6c": {
+    "score": 0.0,
+    "reason": "Model answer 'ToxiGen' is not a list of authors and does not match any of the gold answer names.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model answer 'ToxiGen' is not a list of authors and does not match any of the gold answer names.\"\\n}"
+  },
+  "752b13329808326651ecc5d4e91fd2da689a4935": {
+    "score": 0.0,
+    "reason": "The model answer discusses a completely unrelated medical topic (retinitis pigmentosa diagnosis) and does not address the requested p-values for sleep disorder, depression, and obesity across user groups.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer discusses a completely unrelated medical topic (retinitis pigmentosa diagnosis) and does not address the requested p-values for sleep disorder, depression, and obesity across user groups.\"\\n"
+  },
+  "f497ad2cb190204ad5157f31e0bd8d4b3a98678b": {
+    "score": 0.0,
+    "reason": "The model answer describes an unrelated experimental result, while the gold answer specifies the four student proficiency configurations.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer describes an unrelated experimental result, while the gold answer specifies the four student proficiency configurations.\"\\n}"
+  },
+  "5590e5c3b64f825035bc31d0530a30123311bbc1": {
+    "score": 0.0,
+    "reason": "The model answer does not address the question about prompting strategies and the final setup; it instead discusses unrelated limitations of prior work.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer does not address the question about prompting strategies and the final setup; it instead discusses unrelated limitations of prior work.\"\\n}"
+  },
+  "b16f780efe264301e9a36132561ae8bc2021a190": {
+    "score": 0.0,
+    "reason": "The model answer provides a specific cancer diagnosis, which is completely unrelated to the gold answer's request for mean length statistics of physician responses.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer provides a specific cancer diagnosis, which is completely unrelated to the gold answer's request for mean length statistics of physician responses.\"\\n}"
+  },
+  "b18f14776babb25ce840bc625f50cc0558a84f8a": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question and provides factually incorrect information.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer is completely unrelated to the question and provides factually incorrect information.\"\\n}"
+  },
+  "e8216b77d413b73c91cfa7c187bbbe51a0afcdd8": {
+    "score": 0.0,
+    "reason": "The model answer describes a qualitative review of case studies, which is completely unrelated to the gold answer about the proposed framework's name (PRISM).",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer describes a qualitative review of case studies, which is completely unrelated to the gold answer about the proposed framework's name (PRISM).\"\\n}"
+  },
+  "e445c88204e59017019b81078b44002b3669726b": {
+    "score": 0.0,
+    "reason": "Model Answer is completely unrelated to the question and provides no relevant information, while the Gold Answer correctly states the information is unavailable.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model Answer is completely unrelated to the question and provides no relevant information, while the Gold Answer correctly states the information is unavailable.\"\\n}"
+  },
+  "7e66514d7fafdfc6e0e7b05ba771c103b8bec29a": {
+    "score": 0.0,
+    "reason": "The model answer lists entirely incorrect authors and provides no conference information.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer lists entirely incorrect authors and provides no conference information.\"\\n}"
+  },
+  "f74a84175975250bd2713db1926af94e9f64e9b6": {
+    "score": 0.0,
+    "reason": "The model answer addresses a different question about the corpus and evaluation's value for future research, while the gold answer directly identifies the most similar study (Liu et al., 2024) for SFT of a Llama model and small test set evaluation.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer addresses a different question about the corpus and evaluation's value for future research, while the gold answer directly identifies the most similar study (Liu et al., 2024) for SFT of a L"
+  },
+  "82d2678ea868a5f784c38e6742cb28a1a941affc": {
+    "score": 0.0,
+    "reason": "The model answer describes a training paradigm and evolutionary mechanisms, which is completely unrelated to the gold answer about specific hyperparameter settings (do sample, temperature, top p, top k, length penalty, repetition penalty).",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer describes a training paradigm and evolutionary mechanisms, which is completely unrelated to the gold answer about specific hyperparameter settings (do sample, temperature, top p, top k, leng"
+  },
+  "702e1bdd748f5830cfbc07ef2ebca6720680bec2": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question, which asks for a specific RAG configuration prompt. The gold answer states there is insufficient information to answer.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer is completely unrelated to the question, which asks for a specific RAG configuration prompt. The gold answer states there is insufficient information to answer.\"\\n}"
+  },
+  "7b9078e028d1023ca1a0333a09ee4132347b5481": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question, which asks for a paper title. It provides an irrelevant statement about a figure.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer is completely unrelated to the question, which asks for a paper title. It provides an irrelevant statement about a figure.\"\\n}"
+  },
+  "155c261f68a1ffcca514f1ab5c391e3dbd156aed": {
+    "score": 0.0,
+    "reason": "The model answer discusses applications of LLMs in pediatric medicine, which is completely unrelated to the gold answer about preserving generalization capabilities through fine-tuning constraints.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer discusses applications of LLMs in pediatric medicine, which is completely unrelated to the gold answer about preserving generalization capabilities through fine-tuning constraints.\"\\n}"
+  },
+  "48ef93586f4693a2bd79b5748ddb01c98bf27d63": {
+    "score": 0.0,
+    "reason": "The model answer lists unrelated languages and does not provide any author names, which is the required information.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer lists unrelated languages and does not provide any author names, which is the required information.\"\\n}"
+  },
+  "c36e9bd045ef26050a7945d4c1046c038d4c2800": {
+    "score": 0.0,
+    "reason": "The model answer discusses a medical condition unrelated to the question about OSS models, which the gold answer states cannot be answered due to missing information.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer discusses a medical condition unrelated to the question about OSS models, which the gold answer states cannot be answered due to missing information.\"\\n}"
+  },
+  "bf204c370ac2b15049387cfc8a0d50c2dd0d0636": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question, which asks about fine-tuning strategies for Llama 3-13B on the BHC dataset. It instead discusses self-evolving agentic reasoning.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer is completely unrelated to the question, which asks about fine-tuning strategies for Llama 3-13B on the BHC dataset. It instead discusses self-evolving agentic reasoning.\"\\n}"
+  },
+  "5ea5a27845b5709dd6f3fafad432a503c94ce278": {
+    "score": 0.0,
+    "reason": "Model answer is completely unrelated to the question about BUS-BRA results and BUSTR's precision metrics.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model answer is completely unrelated to the question about BUS-BRA results and BUSTR's precision metrics.\"\\n}"
+  },
+  "4fb0d648ca3daa3f86493da3d67749ddb600fc91": {
+    "score": 0.0,
+    "reason": "The model answer describes a technical detail about the Tanh activation function, which is completely unrelated to the question about the PMC-MI dataset and its purpose.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer describes a technical detail about the Tanh activation function, which is completely unrelated to the question about the PMC-MI dataset and its purpose.\"\\n}"
+  },
+  "323970aee731d6e4bfd23a5e9165d1619b59b6b6": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question about inference scores in RAG evaluation.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer is completely unrelated to the question about inference scores in RAG evaluation.\"\\n}"
+  },
+  "3c6cf2f6127ad8f50cc6bb23177d603b3f3a335c": {
+    "score": 0.0,
+    "reason": "The model answer does not list any authors and instead provides an unrelated description of the case study's content.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer does not list any authors and instead provides an unrelated description of the case study's content.\"\\n}"
+  },
+  "37e06251f9bc85a29fb15a803144d59fff6545e3": {
+    "score": 0.0,
+    "reason": "Model answer is completely unrelated to the question about p-values; it discusses unrelated diagnostic parameters instead.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model answer is completely unrelated to the question about p-values; it discusses unrelated diagnostic parameters instead.\"\\n}"
+  },
+  "c0c0f04c549d4fd7353736b64149c5fecba71c0f": {
+    "score": 0.0,
+    "reason": "The model answer describes a different parameter (α) and its value, which is unrelated to the question about the four student proficiency configurations.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer describes a different parameter (α) and its value, which is unrelated to the question about the four student proficiency configurations.\"\\n}"
+  },
+  "b562f233d85664c4979efb21b9f3e7c6a5095851": {
+    "score": 0.0,
+    "reason": "The model answer does not address the question about mean length of physician responses; it discusses terminology choices instead.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer does not address the question about mean length of physician responses; it discusses terminology choices instead.\"\\n}"
+  },
+  "8ffd112df072f2e4faa6832f0b8f9b54e6d6a7e2": {
+    "score": 0.0,
+    "reason": "The model answer describes a reward function, which is completely unrelated to the gold answer's content about prompting strategies and final setup for generating claims.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer describes a reward function, which is completely unrelated to the gold answer's content about prompting strategies and final setup for generating claims.\"\\n}"
+  },
+  "a5badbbdb312b36dd37a6de756780c945f21899a": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question, which asks for the name of a proposed framework. It instead reports benchmark scores from a dataset.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer is completely unrelated to the question, which asks for the name of a proposed framework. It instead reports benchmark scores from a dataset.\"\\n}"
+  },
+  "8ab453b10517ae93f029cb009e42d4cdcdb748c5": {
+    "score": 0.0,
+    "reason": "Model answer is completely unrelated to the question about a benchmark dataset title.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model answer is completely unrelated to the question about a benchmark dataset title.\"\\n}"
+  },
+  "cce2cc17c8f42e30c7f3d751f47c8be2ec4b7e4f": {
+    "score": 0.0,
+    "reason": "Model answer is completely unrelated to the question about funding source and award amount; it describes a dual-LLM structure instead.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model answer is completely unrelated to the question about funding source and award amount; it describes a dual-LLM structure instead.\"\\n}"
+  },
+  "45da5259640aae896494cbb42660cd98741a4ed0": {
+    "score": 0.0,
+    "reason": "The model answer is completely unrelated to the question about similar studies in machine learning, discussing a medical symptom instead.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer is completely unrelated to the question about similar studies in machine learning, discussing a medical symptom instead.\"\\n}"
+  },
+  "b93771ba8c0fe5745750d85d822990a6f99e8dbf": {
+    "score": 1.0,
+    "reason": "The model answer correctly lists all authors and identifies the conference as ACL 2024, which is the 62nd Annual Meeting of the Association for Computational Linguistics. This is a fully correct paraphrase.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 1.0,\\n  \"reason\": \"The model answer correctly lists all authors and identifies the conference as ACL 2024, which is the 62nd Annual Meeting of the Association for Computational Linguistics. This is a fully correct paraphrase.\""
+  },
+  "78b2c096ab906e7d57d57610ee22ef8cb5f7f969": {
+    "score": 0.0,
+    "reason": "Gold answer states insufficient information to answer, while model answer provides specific titles without supporting evidence.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Gold answer states insufficient information to answer, while model answer provides specific titles without supporting evidence.\"\\n}"
+  },
+  "d4a0146c08b1365ebe12a7e94fe671156be4c2b2": {
+    "score": 0.0,
+    "reason": "Gold answer states insufficient data, while model answer provides a specific, unsupported prompt structure.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Gold answer states insufficient data, while model answer provides a specific, unsupported prompt structure.\"\\n}"
+  },
+  "e0cbcad1b34b58b68933aba6bdd95418ce693b2d": {
+    "score": 0.5,
+    "reason": "Model answer includes all correct hyperparameters from gold answer but adds extra unspecified settings (max tokens, pad/eos token IDs), which are not part of the gold standard.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.5,\\n  \"reason\": \"Model answer includes all correct hyperparameters from gold answer but adds extra unspecified settings (max tokens, pad/eos token IDs), which are not part of the gold standard.\"\\n}"
+  },
+  "0415969bef440796b7a1b0fe8adba979e93f1f3d": {
+    "score": 1.0,
+    "reason": "Model answer fully matches gold answer, providing all required metrics and adding supporting precision values.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 1.0,\\n  \"reason\": \"Model answer fully matches gold answer, providing all required metrics and adding supporting precision values.\"\\n}"
+  },
+  "590d430b9ac9f0336a22de76bc5662fc44751b66": {
+    "score": 1.0,
+    "reason": "The model answer correctly paraphrases the gold answer, capturing the core idea of preserving generalization across institutional settings (institution-agnostic generalization) and correctly explains the mechanism (reducing reliance on learned shortcuts tied t",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 1.0,\\n  \"reason\": \"The model answer correctly paraphrases the gold answer, capturing the core idea of preserving generalization across institutional settings (institution-agnostic generalization) and correctly explains the mec"
+  },
+  "e9b3c4a8830a13a160f2c8ee432756860b7769a0": {
+    "score": 0.0,
+    "reason": "The Gold Answer states there is insufficient information to answer the question. The Model Answer provides a specific, unsupported claim, making it incorrect.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The Gold Answer states there is insufficient information to answer the question. The Model Answer provides a specific, unsupported claim, making it incorrect.\"\\n}"
+  },
+  "63368c4872ee73d724c612b85c350f0320cb6247": {
+    "score": 1.0,
+    "reason": "The model answer correctly identifies all four strategies, accurately states the number of epochs for each, and correctly distinguishes between plain text tuning and instruct-tuning with summaries, fully matching the gold answer in meaning.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 1.0,\\n  \"reason\": \"The model answer correctly identifies all four strategies, accurately states the number of epochs for each, and correctly distinguishes between plain text tuning and instruct-tuning with summaries, fully mat"
+  },
+  "a1e0acbc8561a6c720513531e3ffa2388ac394a9": {
+    "score": 0.0,
+    "reason": "Gold answer states insufficient information to answer, while model answer provides a specific definition, which is unsupported.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Gold answer states insufficient information to answer, while model answer provides a specific definition, which is unsupported.\"\\n}"
+  },
+  "63140112f7feced2f131c6066a86a3218980f2b1": {
+    "score": 0.0,
+    "reason": "Model answer lists entirely different authors, none of which match the gold answer.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"Model answer lists entirely different authors, none of which match the gold answer.\"\\n}"
+  },
+  "2012f21b04e78c8f6e31b96e371489b7c58f42d9": {
+    "score": 0.0,
+    "reason": "The model answer states that there is insufficient information to answer the question, while the gold answer provides the specific p-values (< 0.001). This is incorrect.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer states that there is insufficient information to answer the question, while the gold answer provides the specific p-values (< 0.001). This is incorrect.\"\\n}"
+  },
+  "c29ef20973eaf37e38c8932e16f1179fd0b313d2": {
+    "score": 1.0,
+    "reason": "The model answer correctly identifies the PMC-MI dataset as a large-scale training dataset for medical multi-image MLLMs and accurately states the gap it addresses: the focus of existing benchmarks on single-image scenarios, which fails to reflect real-world c",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 1.0,\\n  \"reason\": \"The model answer correctly identifies the PMC-MI dataset as a large-scale training dataset for medical multi-image MLLMs and accurately states the gap it addresses: the focus of existing benchmarks on single"
+  },
+  "7a0d355d1a59350a1b3d29c03304f80e73f7546c": {
+    "score": 1.0,
+    "reason": "The model answer is a direct paraphrase of the gold answer, containing the exact same numerical values and units.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 1.0,\\n  \"reason\": \"The model answer is a direct paraphrase of the gold answer, containing the exact same numerical values and units.\"\\n}"
+  },
+  "96221cb87c4ba2f850812ed29892d2a545496d7d": {
+    "score": 1.0,
+    "reason": "Model answer correctly lists all four configurations with identical meaning and labels as the gold answer, only reordering the parentheses.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 1.0,\\n  \"reason\": \"Model answer correctly lists all four configurations with identical meaning and labels as the gold answer, only reordering the parentheses.\"\\n}"
+  },
+  "7aba335b2f02845298c9c00fbcee8eaac5547c14": {
+    "score": 1.0,
+    "reason": "Model Answer correctly states that the information is insufficient, matching the Gold Answer's assessment.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 1.0,\\n  \"reason\": \"Model Answer correctly states that the information is insufficient, matching the Gold Answer's assessment.\"\\n}"
+  },
+  "c55166cbf7ad29fe19b9af4a49a0df542ec4e96e": {
+    "score": 0.0,
+    "reason": "The model answer is incorrect; it gives a generic name not matching the specific framework (PRISM) in the gold answer.",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 0.0,\\n  \"reason\": \"The model answer is incorrect; it gives a generic name not matching the specific framework (PRISM) in the gold answer.\"\\n}"
+  },
+  "507027b4d8fe6bef00b9ed3f9639d21d7352351f": {
+    "score": 0.0,
+    "reason": "Model answer is incorrect. The gold answer states the information is insufficient, while the model provides a specific dataset name.",
+    "parse_fail": false,
+    "raw_prefix": "{\"score\": 0.0, \"reason\": \"Model answer is incorrect. The gold answer states the information is insufficient, while the model provides a specific dataset name.\"}"
+  },
+  "fcb3d2e1d822a5c1a3aeaa4096fbadb7551f1a0a": {
+    "score": 1.0,
+    "reason": "The model answer correctly restates all key elements from the gold answer: the prompting strategies explored (different task instructions, zero-shot vs. few-shot, varying CoT) and the final setup (single prompt per label, three total). The mention of appendix ",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 1.0,\\n  \"reason\": \"The model answer correctly restates all key elements from the gold answer: the prompting strategies explored (different task instructions, zero-shot vs. few-shot, varying CoT) and the final setup (single pro"
+  },
+  "0412bc1b4ae4321f6b9c4cd5c1280ee41d48d34d": {
+    "score": 1.0,
+    "reason": "The model answer correctly identifies the same study (Liu et al. 2024) and accurately states it performs SFT of a Llama model and evaluates on a small test set, matching the gold answer's core claim. Additional details in the model answer do not contradict the",
+    "parse_fail": false,
+    "raw_prefix": "{\\n  \"score\": 1.0,\\n  \"reason\": \"The model answer correctly identifies the same study (Liu et al. 2024) and accurately states it performs SFT of a Llama model and evaluates on a small test set, matching the gold answer's core claim. Additio"
+  }
+}
